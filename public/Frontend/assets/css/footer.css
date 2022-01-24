@@ -1,0 +1,33 @@
+
+.quick-links{
+    color: #000000; 
+} 
+.quick-links-li a{
+  color: #000000;  
+}
+.contact-us i{
+    font-size: 25px;
+    color: #000000; 
+}
+.contact-us span{
+    padding-left: 10px;
+    font-size: 20px;
+    color: #000000; 
+}
+
+.quick-links{
+    padding-left: 10px;
+    font-size: 20px;
+}
+.social-icons{ 
+    color: #000000; 
+}
+.social-icons i{
+    font-size: 25px;
+    padding-left: 10px;
+    color: #000000; 
+}
+.sub-footer{
+    height: 10vh; 
+    color: #000000;
+}

@@ -1,0 +1,7 @@
+ .service-item-anchor{
+    display: inline;
+ }
+span.service_item{
+    font-size: 70px !important;
+    font-weight: 500;
+}

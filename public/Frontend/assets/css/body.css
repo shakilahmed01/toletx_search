@@ -1,0 +1,85 @@
+.card{ 
+     
+}
+.slider-section img.slider-img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.adversitse{
+    border-radius: 20px;
+}
+.adversitse img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+p.card-title{
+    font-size: 1.4rem ;
+    font-weight: bold;
+}
+.check-detail:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.btn-gen{
+    background-color: #e3e3e3;
+}
+.slider-section{ 
+    border-radius: 25px;
+}
+.slider-section:hover{ 
+    border-radius: 25px;
+}
+.slider-card{ 
+    border-radius: 20px;
+    transition: all .2s !important;
+}
+.slider-card:hover{ 
+    cursor:pointer;
+    -ms-transform: scale(1.5) !important;   /*IE 9  */
+    -webkit-transform: scale(1.5) !important;   /*Safari 3-8 */
+    transform: scale(1.029) !important;
+}
+
+/* profile SECTION start */
+#edi-img-overlay{ 
+    position: relative;
+  }  
+  #edi-img-overlay div{
+     position: absolute;
+     bottom: 5px;
+     left: 60px;
+     color: white;
+     height:50px;
+     width: 50px;
+ } 
+  #edi-img-overlay div {   
+    color: #ff008000; 
+    transition: all .2s linear;
+ } 
+  #edi-img-overlay div:hover {   
+    color:  #ff0080;
+ }  
+  #edi-img-overlay span{ 
+    position: absolute;
+    padding-left:20px; 
+  } 
+  #edi-img-overlay{ 
+    background-color: aliceblue;
+  } 
+  #edi-img-overlay span:hover{ 
+    position: absolute;
+    padding-left:20px;   
+  }  
+/* profile SECTION end */
+
+
+.toggle-password{
+   transition: all .2s linear;
+}
+.toggle-password:hover{
+    cursor: pointer;
+    color:#ff0080;
+}
+.col-md-7{
+    width: 55.333333%;
+}
