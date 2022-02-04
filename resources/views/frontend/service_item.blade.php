@@ -1,10 +1,10 @@
  
      
     <link rel="stylesheet" href="{{asset('Frontend/assets/css/icon.css')}}">      
-    <link rel="stylesheet" href="{{asset('Frontend/assets/css/service_item.css')}}">      
-  <div class="row mt-2  service-group-row service-group-row">
-                        <div class="col-md-2 col-small mx-2 pb-3 pt-3 pb-3 main-service text-center" onclick="location.href='{{route('room')}}'"> 
-                                <span class="icon-room service_item"></span>
+    <!-- <link rel="stylesheet" href="{{asset('Frontend/assets/css/service_item.css')}}">       -->
+  <div class="row mt-2   service-group-row">
+                        <div class="col-md-2 col-small mx-2 pb-3 pt-3 pb-3 main-service text-center " onclick="location.href='{{route('room')}}'"> 
+                                <span class="icon-room service_item "></span>
                                     <br>
                                 <span class="service_item_name"> Room</span> 
                         </div> 

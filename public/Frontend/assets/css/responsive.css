@@ -10,120 +10,62 @@
         width: 850px;
     }
 
-    /* 20 area */
-    .room1{
-        width: 500px;
-    }
-
-    .flat1{
-        width: 500px;
-    }
-
-    .building1{
-        width: 600px;
-    }
-    .parking1{
-        width: 600px;
-    }
-    .hotel1{
-        width: 500px;
-    }
-    .hostel1{
-        width: 500px;
-    }
-    .resort1{
-        width: 500px;
-    }
-
-    .office1{
-        width: 500px;
-    }
-
-    .shop1{
-        width: 500px;
-    }
-
-    .hall1{
-        width: 700px;
-    }
-    .factory1{
-        width: 500px;
-    }
-    .warehouse1{
-        width: 700px;
-    }
-    .land1{
-        width: 500px;
-    }
-    .pond1{
-        width: 500px;
-    
-    }
-    .swimming1{
-        width: 700px;    }
-        .play1{
-            width: 600px;
-        }
-        .shooting1{
-            width: 600px;
-        }
-        .exhibition1{
-            width: 600px;
-        }
-        .rooftop1{
-width: 600px;
-        }
-        .bilboard1{
-            width: 600px;
-        }
-    /* 20area end */
+  
 }
 
 /* responsive part 1 start */
 
 /* responsive part 1 end */
 @media only screen and (max-width: 767px) {
-    /*  */
+    .row1{
+        display: flex;
+         flex-flow: column-reverse;
+          }
 
-    .logo {
-        /* width: 50%; */
-        margin-left: 176px;
+       
+   
+
+          /* .single_page_service{
+            width: 700px ;
+            height: 100px;
+           } */
+           /* .single_page_service .col-small{
+            padding:20px 10px 10px 10px ;
+           } */
+
+.navbar-brand img{ 
+
+        margin-left: 90px;
+    margin-top: -100px;
+    width: 150px;
+    }
+ 
+
+    .setting { 
+        position: absolute;
+    top: -250px;
+    left: 540px;
     }
 
-    #location1 {
-        margin-left: 100px;
-        width: 450px;
+    .notification-row , .setting-row{
+         
+        width: 0px !important;
+        height: 0px !important;
     }
-    .after {
-        /* position: absolute; */
-        /* margin-top: -84px; */
-        margin-left: 320px;
-
-        /* margin-left: 45%; */
-    }
-
-    .setting {
-        position: relative;
-        margin-top: -460px;
-        margin-left: 590px;
-    }
-
     .bell {
-        margin-left: 550px;
-        margin-top: -314px;
+        position: absolute;
+        top: -250px;
+        left: 520px;
     }
     .center-service-item {
-        margin: 0px 100px;
+        margin: 0px 50px;
         margin-bottom: 20px;
     }
 
     .service-group-row {
         width: 600px;
     }
-
-    .slide-show {
-        margin-left: 90px;
-    }
+ 
 
     /* side */
     .offcanvas.show {
@@ -133,190 +75,166 @@ width: 600px;
         width: 100%;
         height: 100%;
     }
-    /* side */
-/* profile */
-    .name {
-        margin-left: 90px;
+  .top-searchbar-row-responsive{
+      width: 90% !important;
+  } 
+} 
+@media only screen and (max-width: 400px){
+    .center-service-item {
+        margin: 0px 0px;
+        margin-bottom: 20px;
     }
 
-    .location-date {
-        width: 550px;
-        margin-bottom: 10px;
+    .service-group-row {
+        width: 300px !important;
+    font-size: 8px !important;
+    } 
+      span.service_item{
+        font-size: 10px !important;
+        font-weight: 500;
+        color: blue;
     }
+}
+@media only screen and (max-width: 426px) {
+  
+    /* header index advertise before login end */
+    .offcanvas.show {
+        width: 300px;
+    }
+    .modal-backdrop.fade {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 583px){
+ 
+    .containerX{
+        width: 600px;  
+    }
+    .setting {
+  
+        position: absolute;
+        top: -250px;
+        left: 340px;    }
 
-    .profilen1 {
-        margin-left: 90px;
-    }
-/* profile1 */
-
-    /* 20 area*/
-    .room1{
-        width: 500px;
-    }
-
-    .flat1{
-        width: 500px;
-    }
-
-    .building1{
-        width: 600px;
-    }
-    .parking1{
-        width: 600px;
-    }
-    .hotel1{
-        width: 500px;
-    }
-    .hostel1{
-        width: 500px;
-    }
-    .resort1{
-        width: 500px;
-    }
-
-    .office1{
-        width: 500px;
-    }
-
-    .shop1{
-        width: 500px;
-    }
-
-    .hall1{
-        width: 700px;
-    }
-    .factory1{
-        width: 500px;
-    }
-    .warehouse1{
-        width: 700px;
-    }
-    .land1{
-        width: 500px;
-    }
-    .pond1{
-        width: 500px;
-    
-    }
-    .swimming1{
-        width: 700px;    }
-        .play1{
-            width: 600px;
-        }
-        .shooting1{
-            width: 600px;
-        }
-        .exhibition1{
-            width: 600px;
-        }
-        .rooftop1{
-width: 600px;
-        }
-        .bilboard1{
-            width: 600px;
-        }
-        
-    /*20 area end */
-
-
-
+    .bell {
+        position: absolute;
+        top: -250px;
+        left: 290px;
+}
+.center-service-item {
+    margin: 0px 0px;
+    margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 426px) {
-    /* header index advertise before login */
+.service-group-row {
+    width: 500px;
+    font-size: 12px;
+} 
+  span.service_item{
+    font-size: 30px !important;
+    font-weight: 500;
+    color: blue;
+}
+  
+}
 
-    .slide-show {
-        margin-left: 200px;
-    }
 
-    /* #location{
-        margin-left: 150px;
-        width: 350px;
-    } */
+@media only screen and (max-width: 450px){
 
-    .logo {
-        /* width: 50%; */
-        margin-left: 210px;
-    }
-    /* .after{
-       
-        margin-left: 240px;
+    .setting {
+  
+        position: absolute;
+        top: -175px !important;
+        left: 290px !important;    }
 
-    } */
+    .bell {
+        position: absolute;
+        top: -175px !important;
 
-    .advert {
-        margin-left: 130px;
-    }
+        left: 280px !important;
+}
 
-    /* .setting{
-        position: relative;
-        margin-top: -172px;
-        margin-left: 340px;
-    }
+  
+}
 
-    .bell{
-        margin-left: 280px;
 
-    } */
+@media only screen and (max-width: 504px) {
+    .setting {
+  
+        position: absolute;
+        top: -175px !important;
+        left: 290px !important;    }
 
-    .login-form {
-        margin-left: 120px;
+    .bell {
+        position: absolute;
+        top: -175px !important;
+
+        left: 280px !important;
+}
+
+    .searchZ{
+        display: none !important;
     }
     .center-service-item {
-        margin: 0px 50px;
+        margin: 0px 0px;
         margin-bottom: 20px;
     }
 
-    .offcanvas.show {
-        width: 300px;
+    .service-group-row {
+        width: 400px !important;
+    font-size: 10px !important;
+    } 
+      span.service_item{
+        font-size: 20px !important;
+        font-weight: 500;
+        color: blue;
     }
-
-    .modal-backdrop.fade {
-        width: 100%;
-        height: 100%;
-    }
-    /* header index advertise before login end */
-}
-
-@media only screen and (max-width: 590px) {
-    .slide-show {
-        margin-left: 200px;
-    }
-    /* 
-    #location{
-        margin-left: 150px;
-        width: 400px;
-    }
-
     
-    .logo{
-        width: 20%;
-        margin-left: 150px;
-    } */
-    .after {
-        margin-left: 240px;
+    .registration-form-card-body{ 
+        width: 360px !important;
     }
-
-    .advert {
-        margin-left: 110px;
-    }
-
-    .login-form {
-        margin-left: 100px;
-    }
-    /* .center-service-item{
-        margin: 0px 50px;
-        margin-bottom: 20px;
-    } */
-
-    /* .offcanvas.show {
-        width: 300px;
-    }
-    .modal-backdrop.fade {
-        width: 100%;
-        height: 100%;
-    } */
 }
+@media only screen and (max-width: 654px) {
+    .center-service-item {
+        margin: 0px 0px;
+        margin-bottom: 20px;
+    }
+
+    .service-group-row {
+        width: 500px;
+        font-size: 12px;
+    } 
+      span.service_item{
+        font-size: 30px !important;
+        font-weight: 500;
+        color: blue;
+    } 
+ 
+   
+}
+
+
+@media only screen and (max-width: 636px) {
+
+
+    .setting {
+  
+        position: absolute;
+        top: -250px;
+        left: 340px;    }
+
+    .bell {
+        position: absolute;
+        top: -250px;
+        left: 310px;
+}
+   
+
+  
+ 
+}
+
 
 /* responsive part 2 start */
 

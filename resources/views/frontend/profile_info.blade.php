@@ -2,11 +2,12 @@
 
 </style>
                 <!-- profile info -->
+                @if(Auth::user())
                 <div class="col-md-4 center-block " >
                     <div class="row profile  ml-5">
                           <a  href="{{route('profile')}}" class="img-a ">
                             <div class="text-center"  >
-                            <img  src="{{ asset('uploads/auth') }}/{{Auth::user()->n_photo}}" class="rounded-circle mx-auto img-img"  alt="" srcset="">
+                            <img  src="{{asset('Frontend/assets/img/profile/person2.png')}}" class="rounded-circle mx-auto img-img"  alt="" srcset="">
                             <i class="fas fa-edit edit edit-img-icon"></i>
                             </div>
 
@@ -20,9 +21,9 @@
                         <div class="name">
 	                            <h3 class="title">{{Auth::user()->name}}</h3>
 
-								<h6>Father Name:{{Auth::user()->father_name}}</h6>
-								<h6>Mother Name:{{Auth::user()->mother_name}}</h6>
-								<h6>Date Of Birth:{{Auth::user()->date_of_birth}}</h6>
+								<h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, dolorum.</h6>
+								<h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, dolorum.</h6>
+								<h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, dolorum.</h6>
 
                <div class=" text-center">
                   <a href="# " class=" " data-toggle="tooltip" data-placement="top" title="Badge 1" >
@@ -37,8 +38,10 @@
                </div>
 
 	                      </div>
-                       <!-- <p class=profilen1 id="profile-name text-center">{{Auth::user()->name}}</p> -->
+                       <p class=profilen1 id="profile-name text-center">Mickel</p>
                     </div>
+                    @else
+                    @endif
 
 <!-- Enable tooltop -->
   <script>

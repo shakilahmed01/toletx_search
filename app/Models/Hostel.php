@@ -37,7 +37,7 @@ class Hostel extends Model implements Searchable
 
             return new SearchResult(
                 $this,
-                $this->hostel_name,
+                $this->address,
                 $url
             );
         }

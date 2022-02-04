@@ -122,7 +122,7 @@
                  <div class="col-md-6 col-sm-12">
                    <label class="weight-600">Availibility</label>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="electricity" class="custom-control-input" id="customCheck1">
+                     <input type="checkbox" name="electricity" value="Electricity" class="custom-control-input" id="customCheck1">
                      <label class="custom-control-label" for="customCheck1">Electricity</label>
                    </div>
 

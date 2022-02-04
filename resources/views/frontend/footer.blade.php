@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToletX</title>
-</head>
-<body>
-   
-</body>
-</html>
+ 
 
 <!doctype html>
 <html lang="en">
@@ -49,36 +38,36 @@
                 <div class="col-md-4">
                  <h2 class="quick-links">Contact Us</h2>
                     <ul class="list-unstyled mt-4 contact-us">
-                       <li>
+                       <li class="mt-2 mb-2">
                            <i class="fas fa-phone"></i>
                          <span>01253156</span>
                        </li>
-                       <li>
+                       <li class="mt-2 mb-2">
                         <i class="far fa-address-book"></i>
                         <span >(Level-11, Annex-II Building), Motijeel C/A, Dhaka, Bangladesh</span>
                        </li>
-                       <li>
+                       <li class="mt-2 mb-2">
                         <i class="far fa-envelope"></i>
                         <span>demo@demo.com</span>
                       </li> 
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h2 class="quick-links">Quick Links</h2>
+                <div class="col-md-3">
+                    <h2 class="quick-links mt-4 mb-4">Quick Links</h2>
                     <ul class="quick-links mt-4">
-                        <li class="quick-links-li"> 
+                        <li class="quick-links-li mt-2 mb-2"> 
                             <a href="{{route('faq')}}">F.A.Q</a>
                         </li>
-                        <li class="quick-links-li">
+                        <li class="quick-links-li mt-2 mb-2">
                             <a href="#">Terms & Conditions</a>
                         </li>
-                        <li class="quick-links-li">
+                        <li class="quick-links-li mt-2 mb-2">
                             <a href="{{route('report_contact_us')}}">Report / Contact Us</a>
                         </li> 
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h2 class="social-icons">Social Links</h2>
+                <div class="col-md-3">
+                    <h2 class="social-icons mt-4 mb-4">Social Links</h2>
                     <div class="social-icons mt-4">
                         <i class="fab fa-facebook-square"></i>
                         <i class="fab fa-twitter-square"></i>

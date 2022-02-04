@@ -36,7 +36,7 @@ class Room extends Model implements Searchable
 
             return new SearchResult(
                 $this,
-                $this->hotel_name,
+                $this->address,
                 $url
             );
         }

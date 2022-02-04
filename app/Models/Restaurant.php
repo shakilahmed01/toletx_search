@@ -42,7 +42,7 @@ class Restaurant extends Model implements Searchable
 
             return new SearchResult(
                 $this,
-                $this->resort_name,
+                $this->address,
                 $url
             );
         }

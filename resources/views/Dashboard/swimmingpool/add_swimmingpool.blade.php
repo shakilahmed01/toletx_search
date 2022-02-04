@@ -110,28 +110,28 @@
                  <div class="col-md-6 col-sm-12">
                    <label class="weight-600">Availibility</label>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="parking" class="custom-control-input" id="customCheck1">
+                     <input type="checkbox" name="parking" value="Parking" class="custom-control-input" id="customCheck1">
                      <label class="custom-control-label" for="customCheck1">Parking</label>
                    </div>
  									<div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="change_room" class="custom-control-input" id="customCheck2">
+                     <input type="checkbox" name="change_room" value="Changing Room"  class="custom-control-input" id="customCheck2">
                      <label class="custom-control-label" for="customCheck2">Changing Room</label>
                    </div>
  									<div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="toilet" class="custom-control-input" id="customCheck3">
+                     <input type="checkbox" name="toilet" value="Toilet" class="custom-control-input" id="customCheck3">
                      <label class="custom-control-label" for="customCheck3">Toilet</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="gym" class="custom-control-input" id="customCheck4">
+                     <input type="checkbox" name="gym" value="Gym" class="custom-control-input" id="customCheck4">
                      <label class="custom-control-label" for="customCheck4">Gym</label>
                    </div>
 
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="wifi" class="custom-control-input" id="customCheck7">
+                     <input type="checkbox" name="wifi" value="Wifi" class="custom-control-input" id="customCheck7">
                      <label class="custom-control-label" for="customCheck7">wifi</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="laundry" class="custom-control-input" id="customCheck8">
+                     <input type="checkbox" name="laundry" value="Laundry" class="custom-control-input" id="customCheck8">
                      <label class="custom-control-label" for="customCheck8">Laundry</label>
                    </div>
 

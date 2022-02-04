@@ -79,17 +79,19 @@
             </div>
             <div class="col-5 col-md-5">
                 <div class="div justify-content-center">
-                <form class = "form-horizontal top-form mt-4  mb-4" role = "form" action="{{route('search')}}" method="GET">
-                    @csrf
+
                     <div class="row justify-content-center ">
                         <div class="   top-from ">
-                          <input type="search" class="form-control" name="query"   placeholder="Search..." aria-label="Search" required>
-                          <input type="submit" class="btn btn-sm btn-primary" value="Search" style="margin-top: 10px;" />
+                        <form class="form-horizontal top-form mt-4  mb-4 " action="{{route('search')}}" method="GET" >
+                          @csrf
+                          <input type="search" name="query" class="form-control"  id="location1" placeholder="Search..." aria-label="Search">
+                        </form>
                         </div>
                     </div>
-                </form>
+
                 </div>
             </div>
+            @if(Auth::user())
             <div class="col-md-1 mt-4  mb-4 ">
              <!-- <a  href="{{route('after_login_home')}}" class="btn btn-danger" >log out</a> -->
              <li class="nav-item dropdown">
@@ -112,6 +114,7 @@
                  </div>
              </li>
             </div>
+
             <!-- Notification -->
             <div class="col-md-1 notification-row">
                 <div class="dropdown mt-4  mb-4">
@@ -142,6 +145,9 @@
                     </ul>
                 </div>
             </div>
+            @else
+
+            @endif
         </div>
     </form>
          </div>

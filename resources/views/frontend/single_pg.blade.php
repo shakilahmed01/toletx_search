@@ -41,9 +41,9 @@
 
                    <!-- Single item Start -->
 
-        <div class="main-wrapper">
-        <div class="container">
-            <div class="product-div">
+        <div class="main-wrapperX">
+        <div class="containerX">
+            <div class="product-divX">
                 <div class="product-div-left">
                     <div class="picZoomer">
                         <img src="https://www.homestratosphere.com/wp-content/uploads/2018/02/Large-custom-geodesic-house-apr2-1.jpg" alt="">
@@ -54,27 +54,27 @@
                     <div id="carouselExampleControls" class="carousel slide" data-interval="false"  data-bs-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                      <li><img src="https://www.homestratosphere.com/wp-content/uploads/2018/02/Large-custom-geodesic-house-apr2-1.jpg" alt=""></li>
-                        <li><img src="https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/31/1-3816.1517381163.7734.jpg" alt=""></li>
-                        <li><img src="https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/7OGYYKDSJVBKBNVLQQ3W5OHOUM.jpg" alt=""></li>
+                      <li><img class="imgX" src="https://www.homestratosphere.com/wp-content/uploads/2018/02/Large-custom-geodesic-house-apr2-1.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/31/1-3816.1517381163.7734.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/7OGYYKDSJVBKBNVLQQ3W5OHOUM.jpg" alt=""></li>
 
-                        <li><img src="https://vsemart.com/wp-content/uploads/2014/07/Forest-House-in-the-Netherlands.jpg" alt=""></li>
-                        <li><img src="https://us.v-cdn.net/5021068/uploads/editor/i5/27tp0iy9u70e.jpg" alt=""></li>
-                        <li><img src="https://images.unsplash.com/photo-1525113990976-399835c43838?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2UlMjBpbiUyMHRoZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""></li>
-                        <li><img src="https://homeworlddesign.com/wp-content/uploads/2020/01/Modern-Forest-House-3-1.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://vsemart.com/wp-content/uploads/2014/07/Forest-House-in-the-Netherlands.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://us.v-cdn.net/5021068/uploads/editor/i5/27tp0iy9u70e.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://images.unsplash.com/photo-1525113990976-399835c43838?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2UlMjBpbiUyMHRoZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""></li>
+                        <li><img class="imgX" src="https://homeworlddesign.com/wp-content/uploads/2020/01/Modern-Forest-House-3-1.jpg" alt=""></li>
 
 
                       </div>
                       <div class="carousel-item">
 
-                        <li><img src="https://vsemart.com/wp-content/uploads/2014/07/Forest-House-in-the-Netherlands.jpg" alt=""></li>
-                        <li><img src="https://us.v-cdn.net/5021068/uploads/editor/i5/27tp0iy9u70e.jpg" alt=""></li>
-                        <li><img src="https://images.unsplash.com/photo-1525113990976-399835c43838?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2UlMjBpbiUyMHRoZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""></li>
-                        <li><img src="https://homeworlddesign.com/wp-content/uploads/2020/01/Modern-Forest-House-3-1.jpg" alt=""></li>
-                        <li><img src="https://www.homestratosphere.com/wp-content/uploads/2018/02/Large-custom-geodesic-house-apr2-1.jpg" alt=""></li>
-                        <li><img src="https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/31/1-3816.1517381163.7734.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://vsemart.com/wp-content/uploads/2014/07/Forest-House-in-the-Netherlands.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://us.v-cdn.net/5021068/uploads/editor/i5/27tp0iy9u70e.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://images.unsplash.com/photo-1525113990976-399835c43838?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2UlMjBpbiUyMHRoZSUyMGZvcmVzdHxlbnwwfHwwfHw%3D&w=1000&q=80" alt=""></li>
+                        <li><img class="imgX" src="https://homeworlddesign.com/wp-content/uploads/2020/01/Modern-Forest-House-3-1.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://www.homestratosphere.com/wp-content/uploads/2018/02/Large-custom-geodesic-house-apr2-1.jpg" alt=""></li>
+                        <li><img class="imgX" src="https://archello.s3.eu-central-1.amazonaws.com/images/2018/01/31/1-3816.1517381163.7734.jpg" alt=""></li>
 
-                        <li><img src="https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/7OGYYKDSJVBKBNVLQQ3W5OHOUM.jpg" alt=""></li>
+                        <li><img  src="https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/7OGYYKDSJVBKBNVLQQ3W5OHOUM.jpg" alt=""></li>
 
                       </div>
 
@@ -99,7 +99,8 @@
                                     <span class="close">
                                         &#10006;
                                     </span>
-                                   <iframe width="560" height="315" src="https://www.youtube.com/embed/u2kEjp8nDu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dvSD1EAlAUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                                 </div>
 
                         </div>

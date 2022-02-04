@@ -132,7 +132,7 @@
                  <div class="col-md-6 col-sm-12">
                    <label class="weight-600">Availibility</label>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="drainage_system" class="custom-control-input" id="customCheck8">
+                     <input type="checkbox" name="drainage_system" value="Drainage System" class="custom-control-input" id="customCheck8">
                      <label class="custom-control-label" for="customCheck8">Drainage System</label>
                    </div>
 

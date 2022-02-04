@@ -135,39 +135,39 @@
                  <div class="col-md-6 col-sm-12">
                    <label class="weight-600">Availibility</label>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="parking" class="custom-control-input" id="customCheck1">
+                     <input type="checkbox" name="parking" value="Parking" class="custom-control-input" id="customCheck1">
                      <label class="custom-control-label" for="customCheck1">Parking</label>
                    </div>
  									<div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="fire_safety" class="custom-control-input" id="customCheck2">
+                     <input type="checkbox" name="fire_safety" value="Fire Safety" class="custom-control-input" id="customCheck2">
                      <label class="custom-control-label" for="customCheck2">Fire Safety</label>
                    </div>
  									<div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="utilities" class="custom-control-input" id="customCheck3">
+                     <input type="checkbox" name="utilities" value="Utilities" class="custom-control-input" id="customCheck3">
                      <label class="custom-control-label" for="customCheck3">Utilities</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="lift" class="custom-control-input" id="customCheck4">
+                     <input type="checkbox" name="lift" value="Lift" class="custom-control-input" id="customCheck4">
                      <label class="custom-control-label" for="customCheck4">Lift</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="sitting" class="custom-control-input" id="customCheck5">
+                     <input type="checkbox" name="sitting" value="Sitting Arrangement" class="custom-control-input" id="customCheck5">
                      <label class="custom-control-label" for="customCheck5">Sitting Arrangement</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="cooking" class="custom-control-input" id="customCheck6">
+                     <input type="checkbox" name="cooking" value="Cooking Facilities" class="custom-control-input" id="customCheck6">
                      <label class="custom-control-label" for="customCheck6">Cooking Facilities</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="wifi" class="custom-control-input" id="customCheck7">
+                     <input type="checkbox" name="wifi" value="Wifi" class="custom-control-input" id="customCheck7">
                      <label class="custom-control-label" for="customCheck7">Wifi</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="garden" class="custom-control-input" id="customCheck8">
+                     <input type="checkbox" name="garden" value="Garden" class="custom-control-input" id="customCheck8">
                      <label class="custom-control-label" for="customCheck8">Garden</label>
                    </div>
                    <div class="custom-control custom-checkbox mb-5">
-                     <input type="checkbox" name="vegetations" class="custom-control-input" id="customCheck9">
+                     <input type="checkbox" name="vegetations" value="Vegetations" class="custom-control-input" id="customCheck9">
                      <label class="custom-control-label" for="customCheck9">Vegetations</label>
                    </div>
 

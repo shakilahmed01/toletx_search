@@ -37,7 +37,7 @@ class Shooting_Spot extends Model implements Searchable
 
             return new SearchResult(
                 $this,
-                $this->shooting_name,
+                $this->address,
                 $url
             );
         }

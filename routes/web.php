@@ -17,37 +17,75 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/firebase', [App\Http\Controllers\TestController::class, 'index1']);
 
 //begin All Search
 Route::get('/box', [App\Http\Controllers\TestController::class, 'index']);
 Route::get('/search', [App\Http\Controllers\TestController::class, 'search'])->name('search');
-Route::get('products/{id}',[App\Http\Controllers\TestController::class, 'pshow'] )->name('product.show');
-Route::get('category/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('category.show');
-Route::get('hotel/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('hotel.show');
-Route::get('hostel/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('hostel.show');
+//hotel search
+Route::get('hotel/{id}',[App\Http\Controllers\TestController::class, 'hshow'] )->name('hotel.show');
+Route::get('/hotel/details/{id}',[App\Http\Controllers\TestController::class, 'hotel_details'])->name('hotel_details');
+//end hotel
+//hostel search
+Route::get('hostel/{id}',[App\Http\Controllers\TestController::class, 'hsshow'] )->name('hostel.show');
+Route::get('/hostel/details/{id}',[App\Http\Controllers\TestController::class, 'hostel_details'])->name('hostel_details');
+//end hostel
 Route::get('bilboard/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('bilboard.show');
+//community center search
 Route::get('community/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('community.show');
+Route::get('/community/details/{id}',[App\Http\Controllers\TestController::class, 'community_details'])->name('community_details');
+//end community center
 Route::get('exibution/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('exibution.show');
 Route::get('factory/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('factory.show');
-Route::get('flat/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('flat.show');
-Route::get('land/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('land.show');
-Route::get('office/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('office.show');
-Route::get('parking/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('parking.show');
-Route::get('playground/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('playground.show');
-Route::get('restaurant/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('restaurant.show');
-Route::get('rooftop/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('rooftop.show');
-Route::get('room/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('room.show');
-Route::get('shooting/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('shooting.show');
-Route::get('shop/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('shop.show');
-Route::get('swimmingpool/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('swimmingpool.show');
-Route::get('warehouse/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('warehouse.show');
+//flat search
+Route::get('flat/{id}',[App\Http\Controllers\TestController::class, 'fshow'] )->name('flat.show');
+Route::get('/flat/details/{id}',[App\Http\Controllers\TestController::class, 'flat_details'])->name('flat_details');
+//end flat
+//land search
+Route::get('land/{id}',[App\Http\Controllers\TestController::class, 'lshow'] )->name('land.show');
+Route::get('/land/details/{id}',[App\Http\Controllers\TestController::class, 'land_details'])->name('land_details');
+//end land
+//office search
+Route::get('office/{id}',[App\Http\Controllers\TestController::class, 'oshow'] )->name('office.show');
+Route::get('/office/details/{id}',[App\Http\Controllers\TestController::class, 'office_details'])->name('office_details');
+//end office
+//parking search
+Route::get('parking/{id}',[App\Http\Controllers\TestController::class, 'pshow'] )->name('parking.show');
+Route::get('/parking/details/{id}',[App\Http\Controllers\TestController::class, 'parking_details'])->name('parking_details');
+//end parking search
+//playground search
+Route::get('playground/{id}',[App\Http\Controllers\TestController::class, 'plshow'] )->name('playground.show');
+Route::get('/playground/details/{id}',[App\Http\Controllers\TestController::class, 'playground_details'])->name('playground_details');
+//end play post_playground_information
+//restaurant search
+Route::get('restaurant/{id}',[App\Http\Controllers\TestController::class, 'resortshow'] )->name('restaurant.show');
+Route::get('/restaurant/details/{id}',[App\Http\Controllers\TestController::class, 'restaurant_details'])->name('restaurant_details');
+//end restaurant
+//rooftop search
+Route::get('rooftop/{id}',[App\Http\Controllers\TestController::class, 'rooftopshow'] )->name('rooftop.show');
+Route::get('/rooftop/details/{id}',[App\Http\Controllers\TestController::class, 'rooftop_details'])->name('rooftop_details');
+//end rooftop
+//room search
+Route::get('room/{id}',[App\Http\Controllers\TestController::class, 'rshow'] )->name('room.show');
+Route::get('/room/details/{id}',[App\Http\Controllers\TestController::class, 'room_details'])->name('room_details');
+//end room
+//shooting search
+Route::get('shooting/{id}',[App\Http\Controllers\TestController::class, 'shootingshow'] )->name('shooting.show');
+Route::get('/shooting/details/{id}',[App\Http\Controllers\TestController::class, 'shooting_details'])->name('shooting_details');
+//end shooting
+//shop search
+Route::get('shop/{id}',[App\Http\Controllers\TestController::class, 'shopshow'] )->name('shop.show');
+Route::get('/shop/details/{id}',[App\Http\Controllers\TestController::class, 'shop_details'])->name('shop_details');
+//end shop
+//swimmingpool search
+Route::get('swimmingpool/{id}',[App\Http\Controllers\TestController::class, 'swimmingpoolshow'] )->name('swimmingpool.show');
+Route::get('/swimmingpool/details/{id}',[App\Http\Controllers\TestController::class, 'swimmingpool_details'])->name('swimmingpool_details');
+//end swimmingpool
+//warehouse search
+Route::get('warehouse/{id}',[App\Http\Controllers\TestController::class, 'warehouseshow'] )->name('warehouse.show');
+Route::get('/warehouse/details/{id}',[App\Http\Controllers\TestController::class, 'warehouse_details'])->name('warehouse_details');
+//end warehouse
 //end All Search
-
-
-Route::get('/product', [App\Http\Controllers\TestController::class, 'get_product'])->name('get_product');
-Route::post('/product/post', [App\Http\Controllers\TestController::class, 'post_product'])->name('post_product');
-Route::get('/category', [App\Http\Controllers\TestController::class, 'get_category'])->name('get_category');
-Route::post('/category/post', [App\Http\Controllers\TestController::class, 'post_category'])->name('post_category');
 
 
 Auth::routes(["verify"=>true]);
@@ -73,7 +111,7 @@ Route::post('newregister', [App\http\controllers\UserinformationController::clas
 
 //Facebook Login URL
 Route::prefix('facebook')->name('facebook.')->group( function(){
-    Route::get('auth', [App\Http\Controllers\FaceBookController::class, 'loginUsingFacebook'])->name('login');
+    Route::get('auth', [App\Http\Controllers\FaceBookController::class, 'loginUsingFacebook'])->name('fb_login');
     Route::get('callback', [App\Http\Controllers\FaceBookController::class, 'callbackFromFacebook'])->name('callback');
 });
 

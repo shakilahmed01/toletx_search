@@ -30,9 +30,12 @@
     <script type='text/javascript'
         src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
 
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-
+        <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
         <title>ToletX-Shooting Spot</title>
   </head>
@@ -46,10 +49,11 @@
             <div class="row main-search">
 
             </div>
-            <div class="row">
+            <div class="row row1">
                 <div class="col-md-7 mx-4">
                     <div class="row  ">
                     <div class="col-md-2 col-small mx-2 main-service text-center"  onclick="location.href='{{route('shooting_spot')}}'">
+
                                 <span class="icon-shooting_spot service_item" ></span>
                                     <br>
                                 <span class="service_item_name"> Shooting Spot</span>
@@ -125,7 +129,7 @@
                 </div>
 
 
-                @include('frontend.profile_info') 
+                @include('frontend.profile_info')
                 </div>
             </div>
         </div>
@@ -144,7 +148,7 @@
                 <!-- slider section -->
 
                 <!-- ad section -->
-                <div class="col-md-4 mb-3  advert" style="margin-top: 9.3rem ">
+                <div class="col-md-4 mb-3  advert" style="margin-top: 6.3rem ">
                      @include('frontend.advertise')
                 </div>
                 <!-- ad section -->

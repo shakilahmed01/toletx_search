@@ -36,7 +36,7 @@ class Community_Center extends Model implements Searchable
 
             return new SearchResult(
                 $this,
-                $this->community_name,
+                $this->address,
                 $url
             );
         }

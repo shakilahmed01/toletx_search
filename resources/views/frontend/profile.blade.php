@@ -83,14 +83,14 @@
                                                  <label class="labels">
                                                      <i class="icofont-hotel-boy"></i>
                                                      <span class="info-type">Name : </span>
-                                                     <span class="info">{{Auth::user()->name}}</span>
+                                                     <span class="info">Jamal Gazi</span>
                                                  </label>
                                              </div>
                                              <div class="col-md-12">
                                                  <label class="labels">
                                                      <i class="icofont-user-male"></i>
                                                      <span class="info-type">Father's Name :</span>
-                                                     <span class="info">{{Auth::user()->father_name}}</span>
+                                                     <span class="info">Korim Gazi</span>
                                                  </label>
                                              </div>
                                              <div class="col-md-12">
@@ -98,7 +98,7 @@
                                                      <i class="icofont-user-female"></i>
 
                                                      <span class="info-type">Mothers's Name :</span>
-                                                     <span class="info">{{Auth::user()->mother_name}}</span>
+                                                     <span class="info">Nurjahan Begum</span>
 
                                                  </label>
                                              </div>
@@ -106,14 +106,14 @@
                                                  <label class="labels">
                                                      <i class="icofont-phone"></i>
                                                      <span class="info-type">Phone Number :</span>
-                                                     <span class="info">{{Auth::user()->phone}}</span>
+                                                     <span class="info">017000000001</span>
                                                  </label>
                                              </div>
                                              <div class="col-md-12">
                                                  <label class="labels">
                                                      <i class="icofont-ui-calendar"></i>
                                                      <span class="info-type">Date of Birth :</span>
-                                                     <span class="info">{{Auth::user()->date_of_birth}}</span>
+                                                     <span class="info">01/01/2005</span>
                                                  </label>
                                              </div>
                                              <div class="col-md-12">

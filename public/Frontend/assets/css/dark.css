@@ -1,97 +1,78 @@
 [data-theme="dark"] .body{
-     background: #000000 !important;
+    background: #000000 !important;
+}
+[data-theme="dark"] *{
+    color: #ffffff !important;
+}
+[data-theme="dark"] {
+   background-color: #111 !important;
+   color: #eee;
  }
- [data-theme="dark"] *{
-     color: #ffffff !important;
- }
- [data-theme="dark"] {
-    background-color: #111 !important;
-    color: #eee;
-  }
- /* [data-theme="dark"] .hamburger-icon, .notification-icon, .setting-icon{
-     color: #ffffff ;
- } */
+[data-theme="dark"] .hamburger-icon, 
+[data-theme="dark"] .notification-icon,  
+[data-theme="dark"] .setting-icon, 
+[data-theme="dark"].service_item,
+[data-theme="dark"] .service_item,
+[data-theme="dark"] .service_item_name,
+[data-theme="dark"] .login-wrap-body h3,
+[data-theme="dark"] .checkmark:after,
+[data-theme="dark"] p.card-text,
+[data-theme="dark"] a.dropdown-item,
+[data-theme="dark"] .registration-form-card h2
 
- [data-theme="dark"]  .service-item-anchor{
-    display: inline;
- }
- [data-theme="dark"] .service_item, .hamburger-icon, .notification-icon, .setting-icon{
+{
     color: #ffffff !important;
 }
-[data-theme="dark"] .service_item_name{
-    color: #ffffff !important;
-}
+
+
 
 [data-theme="dark"] .login-wrap-body{
-    background-color: #000000 !important;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px !important; 
-}
-[data-theme="dark"] .login-wrap-body h3 {
-    color: #ffffff !important;   
-}
-[data-theme="dark"] .checkmark:after { 
-    color: #ffffff !important;   
-}
+   background-color: #000000 !important;
+   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px !important; 
+}  
 [data-theme="dark"] .checkbox-primary input:checked ~ .checkmark:after {
-    color: #ff0985 !important;
-}
-[data-theme="dark"] p.card-text{
-    color: #ffffff !important;
-}
+   color: #ff0985 !important;
+} 
 [data-theme="dark"] .slider-section{
-    background-color: #252525 !important; 
+   background-color: #252525 !important; 
 } 
 [data-theme="dark"] section.ad-card-body{
-    background-color: #252525 !important; 
-    border-radius: 20px;
-    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px !important; 
+   background-color: #252525 !important; 
+   border-radius: 20px;
+   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px !important; 
 }
 [data-theme="dark"] .dropdown-menu{
-    background-color: #252525 !important;
-}
-[data-theme="dark"] a.dropdown-item{
-    color: #ffffff !important;
-}
+   background-color: #252525 !important;
+} 
 [data-theme="dark"] .offcanvas{
-    background-color: #252525 !important;
+   background-color: #252525 !important;
 }
 [data-theme="dark"] .form-control-placeholder{
-    color: #ff0985 !important;
-    font-weight: bold;
+   color: #ff0985 !important;
+   font-weight: bold;
 }
 [data-theme="dark"] .registration-form-card-body fieldset{ 
-    background-color: #252525 !important;
+   background-color: #252525 !important;
 }
 [data-theme="dark"] .form-card{
-    background-color: #252525 !important;
+   background-color: #252525 !important;
 }
 [data-theme="dark"] .registration-form-card{
-    background-color: #252525 !important;
-    box-shadow: rgba(255, 255, 255, 0.911) 0px 3px 8px;
-}
-[data-theme="dark"] .registration-form-card h2{
-    color: #ffffff !important;
-}
-[data-theme="dark"] .product-div{
-    background-color: #252525 !important;
-}
-[data-theme="dark"] .icon1 div{
-    background-color: #545454 !important;
-}
-[data-theme="dark"] h1.fs-1{
-    background-color: #545454 !important;
-}
- 
-[data-theme="dark"] .accordion-item {
-    background-color: #444444 !important; 
-}
-[data-theme="dark"] button.accordion-button, button.collapsed {
-    background-color: #757474 !important;
+   background-color: #252525 !important;
+   box-shadow: rgba(255, 255, 255, 0.911) 0px 3px 8px;
 } 
-[data-theme="dark"] span.report-form {
-    background-color: #757474 !important;
-} 
-[data-theme="dark"] .report-form-main input,.report-form-main textarea,.report-form-main select,
-.report-form-main option{
-    color: #757474 !important;
-} 
+[data-theme="dark"]  .service-item-anchor{
+   display: inline;
+}
+[data-theme="dark"]  .accordion-button{
+   background-color: #000000 !important;
+}
+[data-theme="dark"]  .accordion-body{
+   background-color: #252525 !important;
+}
+[data-theme="dark"]  .main-slider-body{
+   background-color: #252525 !important;
+}
+[data-theme="dark"]  .main-slider{
+   /* background-color: #252525 !important;
+} */
