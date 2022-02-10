@@ -40,7 +40,7 @@
   </head>
   <body>
 
-  @include('header')
+  @include('frontend.header')
     </form>
           <!-- Header Start -->
     <header class="mt-4">
@@ -113,7 +113,7 @@
                </div>
 
                </div>
-               @include('profile_info')
+               @include('frontend.profile_info')
                </div>
            </div>
        </div>
@@ -127,13 +127,13 @@
            <div class="row">
                <!-- slider section -->
                <div class="col-8 slider-center slide-show">
-                         @include('slider_section')
+                         @include('frontend.slider_section')
                </div>
                <!-- slider section -->
 
                <!-- ad section -->
                 <div class="col-md-4 mb-3  advert" style="margin-top: 6.3rem ">
-                    @include('advertise')
+                    @include('frontend.advertise')
                </div>
                <!-- ad section -->
 
@@ -143,7 +143,7 @@
    <!-- Section End -->
 
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

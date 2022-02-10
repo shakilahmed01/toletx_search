@@ -59,10 +59,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" action="{{route('search')}}" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('hostel_search')}}" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" name="query" placeholder="Location" aria-label=" location" required>
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label=" location" >
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
@@ -80,71 +80,49 @@
                           <!-- Checkbox filters -->
                       <div class="mt-3">
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_toilet" value="wifi">
+                                <input class="form-check-input" type="checkbox" name="attached_toilet" id="attached_toilet" value="Attached">
                                 <label class="form-check-label checkboxes-label" for="attached_toilet">Attached Toilet</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_veranda" value="attached_veranda">
+                                <input class="form-check-input" type="checkbox" name="attached_varanda" id="attached_veranda" value="Attached">
                                 <label class="form-check-label checkboxes-label" for="attached_veranda">Attached Veranda</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="hot_water" value="hot_water">
+                                <input class="form-check-input" type="checkbox"name="hot_water" id="hot_water" value="hot">
                                 <label class="form-check-label checkboxes-label" for="hot_water">Hot Water</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="ac" value="ac">
+                                <input class="form-check-input" type="checkbox"name="ac" id="ac" value="ac">
                                 <label class="form-check-label checkboxes-label" for="ac">A.C</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="wifi" value="wifi">
+                                <input class="form-check-input" type="checkbox"name="wifi" id="wifi" value="wifi">
                                 <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
                             </div>
                       <div class="mt-3">
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="laundry" value="laundry">
+                                <input class="form-check-input" type="checkbox"name="laundry" id="laundry" value="laundry">
                                 <label class="form-check-label checkboxes-label" for="laundry">Laundry</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="lift" value="lift"  >
+                                <input class="form-check-input" type="checkbox"name="lift" id="lift" value="lift"  >
                                 <label class="form-check-label checkboxes-label" for="lift">Lift</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="furnished" value="furnished">
+                                <input class="form-check-input" type="checkbox" name="furnished" id="furnished" value="furnished">
                                 <label class="form-check-label checkboxes-label" for="furnished">Furnished</label>
                             </div>
                         <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="cableTv" value="cableTv">
+                                <input class="form-check-input" type="checkbox" name="cable_tv" id="cableTv" value="cable">
                                 <label class="form-check-label checkboxes-label" for="cableTv">Cable TV</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="parking" value="parking"  >
+                                <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
                                 <label class="form-check-label checkboxes-label" for="parking">Parking</label>
                             </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="dining" value="dining"  >
-                                <label class="form-check-label checkboxes-label" for="dining">Dining</label>
-                            </div>
+
                             <div class="mt-3">
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="swimming_pool" value="swimming_pool"  >
-                                  <label class="form-check-label checkboxes-label" for="swimming_pool">Swimming Pool</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="gym" value="gym"  >
-                                  <label class="form-check-label checkboxes-label" for="gym">Gym</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="spa" value="spa"  >
-                                  <label class="form-check-label checkboxes-label" for="spa">Spa</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="sports_facilities" value="sports_facilities"  >
-                                  <label class="form-check-label checkboxes-label" for="sports_facilities">Sports Facilities</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="fire_safety" value="fire_safety"  >
-                                  <label class="form-check-label checkboxes-label" for="fire_safety">Fire Safety</label>
-                              </div>
+
                             </div>
                       </div>
                       </div>

@@ -57,7 +57,7 @@
                 <div class="col-md-7 mx-4">
                     <div class="row  ">
                       <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('room')}}'">
-                                  <span class="icon-room service_item"></span>
+                                  <span class="icon-hostel service_item"></span>
                                       <br>
                                   <span class="service_item_name"> Hostel</span>
                           </div>
@@ -85,7 +85,7 @@
                           <!-- Checkbox filters -->
                           <div class="mt-3">
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_toilet" value="wifi">
+                                <input class="form-check-input" type="checkbox" id="attached_toilet"  value="wifi">
                                 <label class="form-check-label checkboxes-label" for="attached_toilet">Attached Toilet</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">

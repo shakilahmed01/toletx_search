@@ -64,10 +64,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('flat_search')}}" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label="First name">
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label="First name">
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">

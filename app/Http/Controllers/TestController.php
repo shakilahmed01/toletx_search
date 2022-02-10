@@ -429,6 +429,16 @@ class TestController extends Controller
       return view('Dashboard.search.single_warehouse_list',compact('list'));
     }
 //end warehouse
+    function bilboardshow(){
+      $bilboard=Bilboard::all();
+      return view('Dashboard.search.bilboard',compact('bilboard'));
+    }
+    function bilboard_details($id){
+      $bilboard=Bilboard::findOrFail($id);
+      return view('Dashboard.search.single_bilboard_list',compact('bilboard'));
+    }
+//end billboard
+
 
   function index1(){
     return view('firebase');

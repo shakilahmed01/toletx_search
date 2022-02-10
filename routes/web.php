@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Spatie\QueryBuilder\QueryBuilder;
+use App\Models\Hotel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/ss', function () {
+  $users = QueryBuilder::for(Hotel::class)
+     ->allowedFilters(['hotel_name', 'price'])
+    ->get();
+    return $users;
+
+    return view('welcome');
+});
 
 Route::get('/firebase', [App\Http\Controllers\TestController::class, 'index1']);
 
@@ -25,12 +31,19 @@ Route::get('/search', [App\Http\Controllers\TestController::class, 'search'])->n
 //hotel search
 Route::get('hotel/{id}',[App\Http\Controllers\TestController::class, 'hshow'] )->name('hotel.show');
 Route::get('/hotel/details/{id}',[App\Http\Controllers\TestController::class, 'hotel_details'])->name('hotel_details');
+Route::get('/hotel/custom/search',[App\Http\Controllers\CustomSearchController::class, 'hotel_search'])->name('hotel_search');
+Route::get('/hotel/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'hotel_custom_details'])->name('hotel_custom_details');
 //end hotel
 //hostel search
 Route::get('hostel/{id}',[App\Http\Controllers\TestController::class, 'hsshow'] )->name('hostel.show');
 Route::get('/hostel/details/{id}',[App\Http\Controllers\TestController::class, 'hostel_details'])->name('hostel_details');
+Route::get('/hostel/custom/search',[App\Http\Controllers\CustomSearchController::class, 'hostel_search'])->name('hostel_search');
+Route::get('/hostel/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'hostel_custom_details'])->name('hostel_custom_details');
 //end hostel
-Route::get('bilboard/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('bilboard.show');
+Route::get('bilboard/{id}',[App\Http\Controllers\TestController::class, 'bilboardshow'] )->name('bilboard.show');
+Route::get('/bilboard/details/{id}',[App\Http\Controllers\TestController::class, 'bilboard_details'])->name('bilboard_details');
+Route::get('/bilboard/custom/search',[App\Http\Controllers\CustomSearchController::class, 'bilboard_search'])->name('bilboard_search');
+Route::get('/bilboard/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'bilboard_custom_details'])->name('bilboard_custom_details');
 //community center search
 Route::get('community/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('community.show');
 Route::get('/community/details/{id}',[App\Http\Controllers\TestController::class, 'community_details'])->name('community_details');
@@ -40,6 +53,8 @@ Route::get('factory/{id}',[App\Http\Controllers\TestController::class, 'cshow'] 
 //flat search
 Route::get('flat/{id}',[App\Http\Controllers\TestController::class, 'fshow'] )->name('flat.show');
 Route::get('/flat/details/{id}',[App\Http\Controllers\TestController::class, 'flat_details'])->name('flat_details');
+Route::get('/flat/custom/search',[App\Http\Controllers\CustomSearchController::class, 'flat_search'])->name('flat_search');
+Route::get('/flat/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'flat_custom_details'])->name('flat_custom_details');
 //end flat
 //land search
 Route::get('land/{id}',[App\Http\Controllers\TestController::class, 'lshow'] )->name('land.show');
@@ -68,6 +83,8 @@ Route::get('/rooftop/details/{id}',[App\Http\Controllers\TestController::class, 
 //room search
 Route::get('room/{id}',[App\Http\Controllers\TestController::class, 'rshow'] )->name('room.show');
 Route::get('/room/details/{id}',[App\Http\Controllers\TestController::class, 'room_details'])->name('room_details');
+Route::get('/room/custom/search',[App\Http\Controllers\CustomSearchController::class, 'room_search'])->name('room_search');
+Route::get('/room/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'room_custom_details'])->name('room_custom_details');
 //end room
 //shooting search
 Route::get('shooting/{id}',[App\Http\Controllers\TestController::class, 'shootingshow'] )->name('shooting.show');

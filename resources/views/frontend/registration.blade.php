@@ -67,7 +67,7 @@
                  <h2><strong>Sign Up Your User Account</strong></h2>
                  <p>Fill all form field to go to next step</p>
                  <div class="row">
-                   @extends('firebase')
+                   @include('firebase')
                    <div class="col-md-12 mx-0">
                      <form method="POST" action="{{ route('newregister') }}" id="msform" enctype="multipart/form-data">
                        @csrf

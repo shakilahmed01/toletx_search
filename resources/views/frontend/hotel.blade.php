@@ -53,104 +53,73 @@
                           </div>
                     </div>
                     <div class="row ml-4 mr-4 ">
-                        <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label=" location">
-                                    </div>
-                                    <div class="col-md-2 mt-2  top-from">
-                                    <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
-                                    </div>
-                                    <div class="col-md-2  mt-2  top-from">
-                                    <input type="date" class="form-control" id="check-out-date" placeholder="Add Dates" aria-label="Add Dates">
-                                    </div>
-                                    <div class="col-md-2  mt-2 top-from">
-                                    <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
-                                    </div>
-                                    <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="button"class="form-control btn btn-danger"  id="" value="Search">
-                                    </div>
-                                </div>
-                                 <!-- Checkbox filters -->
-                                 <div class="mt-3">
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_toilet" value="wifi">
-                                <label class="form-check-label checkboxes-label" for="attached_toilet">Attached Toilet</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_veranda" value="attached_veranda">
-                                <label class="form-check-label checkboxes-label" for="attached_veranda">Attached Veranda</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="hot_water" value="hot_water">
-                                <label class="form-check-label checkboxes-label" for="hot_water">Hot Water</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="ac" value="ac">
-                                <label class="form-check-label checkboxes-label" for="ac">A.C</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="wifi" value="wifi">
-                                <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
-                            </div>
-                      <div class="mt-3">
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="laundry" value="laundry">
-                                <label class="form-check-label checkboxes-label" for="laundry">Laundry</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="lift" value="lift"  >
-                                <label class="form-check-label checkboxes-label" for="lift">Lift</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="furnished" value="furnished">
-                                <label class="form-check-label checkboxes-label" for="furnished">Furnished</label>
-                            </div>
-                        <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="cableTv" value="cableTv">
-                                <label class="form-check-label checkboxes-label" for="cableTv">Cable TV</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="parking" value="parking"  >
-                                <label class="form-check-label checkboxes-label" for="parking">Parking</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="dining" value="dining"  >
-                                <label class="form-check-label checkboxes-label" for="dining">Dining</label>
-                            </div>
-                            <div class="mt-3">
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="swimming_pool" value="swimming_pool"  >
-                                  <label class="form-check-label checkboxes-label" for="swimming_pool">Swimming Pool</label>
+                      <div class="container container-fluid">
+                          <form class = "form-horizontal top-form" action="{{route('hotel_search')}}" role = "form">
+                              <div class="row justify-content-center">
+                                  <div class="col-md-2 mt-2 top-from">
+                                  <input type="text" class="form-control" id="location" name="location" placeholder="Location" aria-label=" location" >
+                                  </div>
+                                  <div class="col-md-2 mt-2  top-from">
+                                  <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
+                                  </div>
+                                  <div class="col-md-2  mt-2  top-from">
+                                  <input type="date" class="form-control" id="check-out-date" placeholder="Add Dates" aria-label="Add Dates">
+                                  </div>
+                                  <div class="col-md-2  mt-2 top-from">
+                                  <input type="number" class="form-control" id="guest-count" name="guest_count" placeholder="Guests" aria-label="Guests">
+                                  </div>
+                                  <div class="col-sm-4 mt-2  top-from ">
+                                      <input type="submit" class="form-control btn btn-danger" placeholder="Search" >
+                                  </div>
                               </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="gym" value="gym"  >
-                                  <label class="form-check-label checkboxes-label" for="gym">Gym</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="spa" value="spa"  >
-                                  <label class="form-check-label checkboxes-label" for="spa">Spa</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="sports_facilities" value="sports_facilities"  >
-                                  <label class="form-check-label checkboxes-label" for="sports_facilities">Sports Facilities</label>
-                              </div>
-                              <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="fire_safety" value="fire_safety"  >
-                                  <label class="form-check-label checkboxes-label" for="fire_safety">Fire Safety</label>
-                              </div>
-                            </div>
-                      </div>
-                      </div>
-                     <div class="mt-3 ml-3">
-                     <span class="checkboxes-label">Price Range</span>
-        <input type="range" value="24" min="0" max="100000" oninput="this.nextElementSibling.value = this.value">
-               <output class="checkboxes-label">24</output>
-                     </div>
+                        <!-- Checkbox filters -->
+                    <div class="mt-3">
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox" name="bathroom" id="attached_toilet" value="Attached">
+                              <label class="form-check-label checkboxes-label" for="attached_toilet">Bath room</label>
+                          </div>
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox" name="security" id="security" value="Attached">
+                              <label class="form-check-label checkboxes-label" for="attached_veranda">Security</label>
+                          </div>
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox" name="cctv" id="hot_water" value="cctv">
+                              <label class="form-check-label checkboxes-label" for="hot_water">CC TV</label>
+                          </div>
 
-                            </form>
-                        </div>
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox"name="wifi" id="wifi" value="wifi">
+                              <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
+                          </div>
+                    <div class="mt-3">
+
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox"name="lift" id="lift" value="lift"  >
+                              <label class="form-check-label checkboxes-label" for="lift">Lift</label>
+                          </div>
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox" name="furnished" id="furnished" value="furnished">
+                              <label class="form-check-label checkboxes-label" for="furnished">Furnished</label>
+                          </div>
+                
+                          <div class="form-check form-check-inline ml-3">
+                              <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
+                              <label class="form-check-label checkboxes-label" for="parking">Parking</label>
+                          </div>
+
+                          <div class="mt-3">
+
+                          </div>
+                    </div>
+                    </div>
+                   <div class="mt-3 ml-3">
+                   <span class="checkboxes-label">Price Range</span>
+      <input type="range" value="24" min="0" max="100000" oninput="this.nextElementSibling.value = this.value">
+             <output class="checkboxes-label">24</output>
+                   </div>
+
+                          </form>
+                      </div>
                 </div>
 
                 </div>
@@ -186,7 +155,7 @@
     <!-- Section End -->
 
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

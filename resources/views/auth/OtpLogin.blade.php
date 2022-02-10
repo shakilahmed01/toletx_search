@@ -1,6 +1,5 @@
-@extends('layouts.app')
+@include('frontend.header')
 
-@section('content')
 
     <div class="container">
         <div class="row justify-content-center">
@@ -41,9 +40,10 @@
                                 </div>
                             </div>
                         </form>
+
                         <div class="form-group row send-otp">
                             <div class="col-md-8 offset-md-4">
-                                <button class="btn btn-success" onclick="sendOtp()">Send OTP</button>
+                                <button class="btn btn-success"  onclick="sendOtp()">Send OTP</button>
                             </div>
                         </div>
                     </div>
@@ -86,4 +86,4 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-@endsection
+@include('frontend.footer')

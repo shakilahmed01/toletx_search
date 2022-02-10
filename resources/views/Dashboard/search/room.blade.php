@@ -165,7 +165,7 @@
                    type="text/javascript"
                    src="{{asset('Frontend/assets/js/slick.js')}}"
                  ></script>
-                 </head>
+
 
                  <body class="snippet-body">
                  <div class="items">

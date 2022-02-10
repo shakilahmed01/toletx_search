@@ -1,6 +1,4 @@
-<style>
 
-</style>
                 <!-- profile info -->
                 @if(Auth::user())
                 <div class="col-md-4 center-block " >
