@@ -88,7 +88,7 @@
                    @foreach($array as $arrays)
                      <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
                        <img
-                         src="{{ asset('uploads/hostels') }}/{{ $arrays->photo }}"
+                         src="{{ asset('uploads/rooms') }}/{{ $arrays->photo }}"
                          class="card-img-top"
                          alt="..."
                        />
@@ -103,10 +103,10 @@
                          </span>
                          <p class="mt-3 main-slider">
                            <i class="fas fa-border-all"></i>
-                           <span>3600 sqft</span>
+                           <span>{{ $arrays->room_size }}</span>
                          </p>
                          <button type="button" class="btn btn-custom-color2 check-detail mt-2">
-                           <a href="{{ url('hostel/custom/search/details') }}/{{ $arrays->id }}" class="btn  ">Check Details</a>
+                           <a href="{{ url('room/custom/search/details') }}/{{ $arrays->id }}" class="btn  ">Check Details</a>
                          </button>
 
                        </div>

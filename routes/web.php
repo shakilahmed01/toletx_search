@@ -67,6 +67,9 @@ Route::get('/office/details/{id}',[App\Http\Controllers\TestController::class, '
 //parking search
 Route::get('parking/{id}',[App\Http\Controllers\TestController::class, 'pshow'] )->name('parking.show');
 Route::get('/parking/details/{id}',[App\Http\Controllers\TestController::class, 'parking_details'])->name('parking_details');
+Route::get('/parking/custom/search',[App\Http\Controllers\CustomSearchController::class, 'parking_spot_search'])->name('parking_spot_search');
+Route::get('/parking/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'parking_spot_custom_details'])->name('parking_spot_custom_details');
+
 //end parking search
 //playground search
 Route::get('playground/{id}',[App\Http\Controllers\TestController::class, 'plshow'] )->name('playground.show');
@@ -75,6 +78,8 @@ Route::get('/playground/details/{id}',[App\Http\Controllers\TestController::clas
 //restaurant search
 Route::get('restaurant/{id}',[App\Http\Controllers\TestController::class, 'resortshow'] )->name('restaurant.show');
 Route::get('/restaurant/details/{id}',[App\Http\Controllers\TestController::class, 'restaurant_details'])->name('restaurant_details');
+Route::get('/restaurant/custom/search',[App\Http\Controllers\CustomSearchController::class, 'restaurant_search'])->name('restaurant_search');
+Route::get('/restaurant/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'restaurant_custom_details'])->name('restaurant_custom_details');
 //end restaurant
 //rooftop search
 Route::get('rooftop/{id}',[App\Http\Controllers\TestController::class, 'rooftopshow'] )->name('rooftop.show');

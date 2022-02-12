@@ -114,7 +114,7 @@
 
     <div class="product-div-right">
         <span class="product-name">
-            {{$list->hotel_name}}
+            {{$list->address}}
         </span>
         <span class="product-price">
             {{$list->price}}BDT
@@ -157,73 +157,30 @@
             <div>
                 <i class="fas fa-tools">
                 </i>
-                <h6>Utilities</h6>
-                {{$list->utilities}}
+                <h6>Electricity</h6>
+                {{$list->electricity}}
             </div>
             <div>
-                <i class="fas fa-elevator"></i>
-                <h6>Lift</h6>
-                {{$list->lift}}
+                <i class="fas fa-tools">
+                </i>
+                <h6>Hieght</h6>
+                {{$list->hieght}}
             </div>
             <div>
-                <i class="fas fa-video"></i>
-                <h6>Hot Water</h6>
-                {{$list->hot_water}}
+                <i class="fas fa-tools">
+                </i>
+                <h6>Size</h6>
+                {{$list->size}}
             </div>
             <div>
-                <i class="fas fa-soap"></i>
-                <h6>Laundry</h6>
-                {{$list->laundry}}
+                <i class="fas fa-tools">
+                </i>
+                <h6>Type</h6>
+                {{$list->type}}
             </div>
-            <div>
-                <i class="fas fa-tv"></i>
-                <h6>Cable Tv</h6>
-                {{$list->cable_tv}}
-            </div>
-            <!-- <span>
-                <i class="fas fa-procedures"></i>
-            </span> -->
-            <div>
-                <i class="fas fa-wind"></i>
-                <h6>AC</h6>
-                {{$list->ac}}
-            </div>
+
         </div>
-        <br>
-        <div class="icon1">
-          <div>
-              <i class="fas fa-wifi">
-              </i>
-              <h6>Wifi</h6>
-              {{$list->wifi}}
-          </div>
-          <div>
-              <i class="fas fa-toilet"></i>
-              <h6>toilet</h6>
-              {{$list->attached_toilet}}
-          </div>
-          <div>
-              <i class="fas fa-video"></i>
-              <h6>cctv</h6>
-          </div>
-          <div>
-              <i class="fas fa-user-shield"></i>
-              <h6>security</h6>
-          </div>
-          <div>
-              <i class="fas fa-parking"></i>
-              <h6>parking</h6>
-              {{$list->parking}}
-          </div>
-          <!-- <span>
-              <i class="fas fa-procedures"></i>
-          </span> -->
-          <div>
-              <i class="fas fa-chair"></i>
-              <h6>Furnished</h6>
-              {{$list->furnished}}
-          </div>
-        </div>
+
 
     </div>
 

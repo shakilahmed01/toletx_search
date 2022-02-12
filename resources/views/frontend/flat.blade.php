@@ -75,7 +75,7 @@
                                   <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
                                   </div>
                                   <div class="col-sm-4 mt-2  top-from ">
-                                      <input type="submit" class="form-control btn btn-danger" placeholder="Search" >
+                                      <input type="submit" class="form-control btn btn-danger" placeholder="Search" value="Search" >
                                   </div>
                               </div>
                         <!-- Checkbox filters -->

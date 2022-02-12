@@ -94,11 +94,11 @@
             @if(Auth::user())
             <div class="col-md-1 mt-4  mb-4 ">
              <!-- <a  href="{{route('after_login_home')}}" class="btn btn-danger" >log out</a> -->
-             <li class="nav-item dropdown">
+             <div class="nav-item dropdown">
                <!-- <img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}"
                   style="border: 1px solid #cccccc; border-radius: 5px; width: 39px; height: auto;float:left; margin-right: 7px;"> -->
                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                     {{ Auth::user()->name }}
+                     <span class="btn btn-danger">{{ Auth::user()->name }}</span>
                  </a>
 
                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -112,7 +112,7 @@
                          @csrf
                      </form>
                  </div>
-             </li>
+             </div>
             </div>
 
             <!-- Notification -->

@@ -1,6 +1,6 @@
 <div class="left-side-bar">
   <div class="brand-logo">
-    <a href="{{route('home')}}">
+    <a href="{{route('admin_index')}}">
       <img src="{{asset('Dashboard/vendors/images/toletx_logo_main.png')}}" alt="" class="dark-logo">
       <img src="{{asset('Dashboard/vendors/images/toletx_logo_main.png')}}" alt="" class="light-logo">
     </a>

@@ -46,7 +46,7 @@
             <div class="product-divX">
                 <div class="product-div-left">
                     <div class="picZoomer">
-                        <img src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt="">
+                        <img src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt="">
                     </div>
 
                     <ul class="piclist">
@@ -54,27 +54,27 @@
                     <div id="carouselExampleControls" class="carousel slide" data-interval="false"  data-bs-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                      <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
+                      <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
 
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
 
 
                       </div>
                       <div class="carousel-item">
 
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
-                        <li><img class="imgX" src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img class="imgX" src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
 
-                        <li><img  src="{{ asset('uploads/hotels') }}/{{ $array->photo }}" alt=""></li>
+                        <li><img  src="{{ asset('uploads/restaurants') }}/{{ $array->photo }}" alt=""></li>
 
                       </div>
 
@@ -114,7 +114,7 @@
 
     <div class="product-div-right">
         <span class="product-name">
-            {{$array->location}}
+            {{$array->address}}
         </span>
         <span class="product-price">
             {{$array->price}}BDT

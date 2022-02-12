@@ -434,8 +434,8 @@ class TestController extends Controller
       return view('Dashboard.search.bilboard',compact('bilboard'));
     }
     function bilboard_details($id){
-      $bilboard=Bilboard::findOrFail($id);
-      return view('Dashboard.search.single_bilboard_list',compact('bilboard'));
+      $list=Bilboard::findOrFail($id);
+      return view('Dashboard.search.single_bilboard_list',compact('list'));
     }
 //end billboard
 

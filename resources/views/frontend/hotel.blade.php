@@ -69,13 +69,13 @@
                                   <input type="number" class="form-control" id="guest-count" name="guest_count" placeholder="Guests" aria-label="Guests">
                                   </div>
                                   <div class="col-sm-4 mt-2  top-from ">
-                                      <input type="submit" class="form-control btn btn-danger" placeholder="Search" >
+                                      <input type="submit" class="form-control btn btn-danger" placeholder="Search" value="Search" >
                                   </div>
                               </div>
                         <!-- Checkbox filters -->
                     <div class="mt-3">
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" name="bathroom" id="attached_toilet" value="Attached">
+                              <input class="form-check-input" type="checkbox" name="bathroom" id="bathroom" value="Bathroom">
                               <label class="form-check-label checkboxes-label" for="attached_toilet">Bath room</label>
                           </div>
                           <div class="form-check form-check-inline ml-3">
@@ -94,14 +94,14 @@
                     <div class="mt-3">
 
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox"name="lift" id="lift" value="lift"  >
+                              <input class="form-check-input" type="checkbox" name="lift" id="lift" value="lift"  >
                               <label class="form-check-label checkboxes-label" for="lift">Lift</label>
                           </div>
                           <div class="form-check form-check-inline ml-3">
                               <input class="form-check-input" type="checkbox" name="furnished" id="furnished" value="furnished">
                               <label class="form-check-label checkboxes-label" for="furnished">Furnished</label>
                           </div>
-                
+
                           <div class="form-check form-check-inline ml-3">
                               <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
                               <label class="form-check-label checkboxes-label" for="parking">Parking</label>

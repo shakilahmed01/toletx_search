@@ -106,7 +106,7 @@
                            <span>3600 sqft</span>
                          </p>
                          <button type="button" class="btn btn-custom-color2 check-detail mt-2">
-                           <a href="{{ url('hostel/custom/search/details') }}/{{ $arrays->id }}" class="btn  ">Check Details</a>
+                           <a href="{{ url('bilboard/custom/search/details') }}/{{ $arrays->id }}" class="btn  ">Check Details</a>
                          </button>
 
                        </div>

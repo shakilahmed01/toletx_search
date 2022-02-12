@@ -51,7 +51,7 @@
             <div class="row row1">
                 <div class="col-md-7 mx-4">
                     <div class="row  ">
-                      <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('bilboard')}}'">
+                      <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('hotel')}}'">
                                   <span class="icon-hotel service_item"></span>
                                       <br>
                                   <span class="service_item_name">Hotel</span>

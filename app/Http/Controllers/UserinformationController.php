@@ -98,7 +98,7 @@ class UserinformationController extends Controller
           $photo_upload     =  $request ->photo;
           $photo_extension  =  $photo_upload -> getClientOriginalExtension();
           $photo_name       =  "toletx_user_main". $auth_image . "." . $photo_extension;
-          Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/auth/'.$photo_name),100);
+          Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/auth/'.$photo_name),100);
           User::find($auth_image)->update([
           'photo'          => $photo_name,
               ]);
@@ -108,7 +108,7 @@ class UserinformationController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_user_n_photo". $auth_image . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/auth/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/auth/'.$photo_name),100);
                 User::find($auth_image)->update([
                 'n_photo'          => $photo_name,
                     ]);

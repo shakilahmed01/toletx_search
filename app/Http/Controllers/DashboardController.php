@@ -89,7 +89,7 @@ class DashboardController extends Controller
           $photo_upload     =  $request ->photo;
           $photo_extension  =  $photo_upload -> getClientOriginalExtension();
           $photo_name       =  "toletx_hotel_image_". $hotel . "." . $photo_extension;
-          Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/hotels/' .$photo_name),100);
+          Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hotels/' .$photo_name),100);
           Hotel::find($hotel)->update([
           'photo'          => $photo_name,
               ]);
@@ -131,7 +131,7 @@ class DashboardController extends Controller
               $photo_upload     =  $request ->photo;
               $photo_extension  =  $photo_upload -> getClientOriginalExtension();
               $photo_name       =  "toletx_hotel_image_". $hotel . "." . $photo_extension;
-              Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/hotels/'.$photo_name),100);
+              Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hotels/'.$photo_name),100);
               Hotel::find($hotel)->update([
               'photo'          => $photo_name,
                   ]);
@@ -181,7 +181,7 @@ class DashboardController extends Controller
           $photo_upload     =  $request ->photo;
           $photo_extension  =  $photo_upload -> getClientOriginalExtension();
           $photo_name       =  "toletx_hotel_image_". $room . "." . $photo_extension;
-          Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/rooms/'.$photo_name),100);
+          Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/rooms/'.$photo_name),100);
           Room::find($room)->update([
           'photo'          => $photo_name,
               ]);
@@ -230,7 +230,7 @@ class DashboardController extends Controller
               $photo_upload     =  $request ->photo;
               $photo_extension  =  $photo_upload -> getClientOriginalExtension();
               $photo_name       =  "toletx_hotel_image_". $room . "." . $photo_extension;
-              Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/rooms/'.$photo_name),100);
+              Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/rooms/'.$photo_name),100);
               Room::find($room)->update([
               'photo'          => $photo_name,
                   ]);
@@ -283,7 +283,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_flat_image_". $flat . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/flats/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/flats/'.$photo_name),100);
             Flat::find($flat)->update([
             'photo'          => $photo_name,
                 ]);
@@ -332,7 +332,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_flat_image_". $flat . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/flats/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/flats/'.$photo_name),100);
                 Flat::find($flat)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -375,7 +375,7 @@ class DashboardController extends Controller
               $photo_upload     =  $request ->photo;
               $photo_extension  =  $photo_upload -> getClientOriginalExtension();
               $photo_name       =  "toletx_parking_spot_image_". $parking . "." . $photo_extension;
-              Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/parkings/'.$photo_name),100);
+              Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/parkings/'.$photo_name),100);
               Parking_Spot::find($parking)->update([
               'photo'          => $photo_name,
                   ]);
@@ -414,7 +414,7 @@ class DashboardController extends Controller
                   $photo_upload     =  $request ->photo;
                   $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                   $photo_name       =  "toletx_parking_spot_image_". $parking . "." . $photo_extension;
-                  Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/parkings/'.$photo_name),100);
+                  Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/parkings/'.$photo_name),100);
                   Parking_Spot::find($parking)->update([
                   'photo'          => $photo_name,
                       ]);
@@ -478,7 +478,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_hostel_image_". $hostel . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/hostels/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hostels/'.$photo_name),100);
             Hostel::find($hostel)->update([
             'photo'          => $photo_name,
                 ]);
@@ -521,7 +521,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_hostel_image_". $hostel . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/hostels/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hostels/'.$photo_name),100);
                 Hostel::find($hostel)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -574,7 +574,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_office_image_". $office . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/offices/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/offices/'.$photo_name),100);
             Office::find($office)->update([
             'photo'          => $photo_name,
                 ]);
@@ -620,7 +620,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_office_image_". $office . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/offices/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/offices/'.$photo_name),100);
                 Office::find($office)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -666,7 +666,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_land_image_". $land . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/lands/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/lands/'.$photo_name),100);
             Land::find($land)->update([
             'photo'          => $photo_name,
                 ]);
@@ -707,7 +707,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_land_image_". $land . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/lands/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/lands/'.$photo_name),100);
                 Land::find($land)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -761,7 +761,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_community_image_". $community . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/communities/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/communities/'.$photo_name),100);
             Community_Center::find($community)->update([
             'photo'          => $photo_name,
                 ]);
@@ -811,7 +811,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_community_image_". $community . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/communities/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/communities/'.$photo_name),100);
                 Community_Center::find($community)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -865,7 +865,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_shooting_image_". $shooting . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/shootings/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/shootings/'.$photo_name),100);
             Shooting_Spot::find($shooting)->update([
             'photo'          => $photo_name,
                 ]);
@@ -916,7 +916,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_shooting_image_". $shooting . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/shootings/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/shootings/'.$photo_name),100);
                 Shooting_Spot::find($shooting)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -965,7 +965,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_shop_image_". $shop . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/shops/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/shops/'.$photo_name),100);
             Shop::find($shop)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1012,7 +1012,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_shop_image_". $shop . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/shops/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/shops/'.$photo_name),100);
                 Shop::find($shop)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1063,7 +1063,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_factory_image_". $factory . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/factories/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/factories/'.$photo_name),100);
             Factory::find($factory)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1112,7 +1112,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_factory_image_". $factory . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/factories/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/factories/'.$photo_name),100);
                 Factory::find($factory)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1164,7 +1164,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_warehouse_image_". $warehouse . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/warehouses/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/warehouses/'.$photo_name),100);
             Warehouse::find($warehouse)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1213,7 +1213,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_warehouse_image_". $warehouse . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/warehouses/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/warehouses/'.$photo_name),100);
                 Warehouse::find($warehouse)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1258,7 +1258,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_pond_image_". $pond . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/ponds/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/ponds/'.$photo_name),100);
             Pond::find($pond)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1298,7 +1298,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_pond_image_". $pond . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/ponds/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/ponds/'.$photo_name),100);
                 Pond::find($pond)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1346,7 +1346,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_swimmingpool_image_". $swimmingpool . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/swimmingpools/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/swimmingpools/'.$photo_name),100);
             Swimming_Pool::find($swimmingpool)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1391,7 +1391,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_swimmingpool_image_". $swimmingpool . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/swimmingpools/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/swimmingpools/'.$photo_name),100);
                 Swimming_Pool::find($swimmingpool)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1436,7 +1436,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_bilboard_image_". $bilboard . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/bilboards/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/bilboards/'.$photo_name),100);
             Bilboard::find($bilboard)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1477,7 +1477,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_billboard_image_". $bilboard . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/bilboards/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/bilboards/'.$photo_name),100);
                 Bilboard::find($bilboard)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1525,7 +1525,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_rooftop_image_". $rooftop . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/rooftops/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/rooftops/'.$photo_name),100);
             Rooftop::find($rooftop)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1567,7 +1567,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_rooftop_image_". $rooftop . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/rooftops/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/rooftops/'.$photo_name),100);
                 Rooftop::find($rooftop)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1627,7 +1627,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_restaurant_image_". $restaurant . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/restaurants/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/restaurants/'.$photo_name),100);
             Restaurant::find($restaurant)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1681,7 +1681,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_restaurant_image_". $restaurant . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/restaurants/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/restaurants/'.$photo_name),100);
                 Restaurant::find($restaurant)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1741,7 +1741,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_exibution_center_image_". $exibution_center . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/exibution_centers/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/exibution_centers/'.$photo_name),100);
             Exibution_Center::find($exibution_center)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1795,7 +1795,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_exibution_center_image_". $exibution_center . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/exibution_centers/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/exibution_centers/'.$photo_name),100);
                 Exibution_Center::find($exibution_center)->update([
                 'photo'          => $photo_name,
                     ]);
@@ -1852,7 +1852,7 @@ class DashboardController extends Controller
             $photo_upload     =  $request ->photo;
             $photo_extension  =  $photo_upload -> getClientOriginalExtension();
             $photo_name       =  "toletx_play_ground_image_". $playground . "." . $photo_extension;
-            Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/playgrounds/'.$photo_name),100);
+            Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/playgrounds/'.$photo_name),100);
             Play_ground::find($playground)->update([
             'photo'          => $photo_name,
                 ]);
@@ -1901,7 +1901,7 @@ class DashboardController extends Controller
                 $photo_upload     =  $request ->photo;
                 $photo_extension  =  $photo_upload -> getClientOriginalExtension();
                 $photo_name       =  "toletx_play_ground_image_". $playground . "." . $photo_extension;
-                Image::make($photo_upload)->resize(100,100)->save(base_path('public/uploads/playgrounds/'.$photo_name),100);
+                Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/playgrounds/'.$photo_name),100);
                 Play_ground::find($playground)->update([
                 'photo'          => $photo_name,
                     ]);

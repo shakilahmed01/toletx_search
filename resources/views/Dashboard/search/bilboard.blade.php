@@ -56,10 +56,10 @@
             <div class="row row1">
                 <div class="col-md-7 mx-4">
                     <div class="row  ">
-                      <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('room')}}'">
-                                  <span class="icon-room service_item"></span>
+                      <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('bilboard')}}'">
+                                  <span class="icon-bilboard service_item"></span>
                                       <br>
-                                  <span class="service_item_name"> Hotel</span>
+                                  <span class="service_item_name"> Bilboard</span>
                           </div>
                     </div>
                     <div class="row ml-4 mr-4 ">
@@ -170,7 +170,7 @@
                  <body class="snippet-body">
                  <div class="items">
 
-                    @foreach($hotels as $hotel)
+                    @foreach($bilboard as $bilboard)
                      <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
                        <img
                          src="{{ asset('uploads/bilboards') }}/{{ $bilboard->photo }}"

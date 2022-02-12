@@ -55,10 +55,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('parking_spot_search')}}" method="get" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label="First name">
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label="First name">
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
@@ -70,32 +70,27 @@
                                     <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
                                     </div>
                                     <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="button"class="form-control btn btn-danger"  id="" value="Search">
+                                        <input type="submit" class="form-control btn btn-danger" placeholder="Search" id="Search" value="Search">
                                     </div>
                                 </div>
                           <!-- Checkbox filters -->
                       <div class="mt-3">
                               <span > <b> Vehicle Type: <br> <br></b> </span>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="two_wheeler" value="two_wheeler">
+                                <input class="form-check-input" type="checkbox" name="vehicle_type" id="two_wheeler" value="two_wheeler">
                                 <label class="form-check-label checkboxes-label" for="two_wheeler">Two Wheeler</label>
 
                                 </div>
                                 <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="three_wheeler" value="three_wheeler">
+                                <input class="form-check-input" type="checkbox" name="vehicle_type" id="three_wheeler" value="three_wheeler">
                                 <label class="form-check-label checkboxes-label" for="three_wheeler">Three Wheeler</label>
                             </div>
                                 <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="four_wheeler" value="four_wheeler">
+                                <input class="form-check-input" type="checkbox" name="vehicle_type" id="four_wheeler" value="four_wheeler">
                                 <label class="form-check-label checkboxes-label" for="four_wheeler">Four Wheeler</label>
                             </div>
 
-                      <div class="mt-3">
-                      <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="number" id="vehicle_no" value=" ">
-                                <label class="form-check-label checkboxes-label" for="vehicle_no"> Number of Vehicle </label>
-                            </div>
-                      </div>
+
                       </div>
                      <div class="mt-3 ml-3">
                      <span class="checkboxes-label">Price Range</span>
@@ -140,7 +135,7 @@
     <!-- Section End -->
 
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

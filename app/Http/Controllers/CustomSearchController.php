@@ -22,6 +22,7 @@ use App\Models\Rooftop;
 use App\Models\Restaurant;
 use App\Models\Exibution_Center;
 use App\Models\Play_ground;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class CustomSearchController extends Controller
 {
@@ -175,7 +176,7 @@ class CustomSearchController extends Controller
              }
 //end hotel
 //room
-function room_search(Request $request){
+    function room_search(Request $request){
    // Get the search value from the request
         $address = $request->input('address');
         $attached_toilet = $request->input('attached_toilet');
@@ -215,5 +216,32 @@ function room_search(Request $request){
          return view('Dashboard.search.custom_search.room.custom_room_details',compact('array'));
        }
 //end room
+//parking Spot
+    function parking_spot_search (){
+      $array = QueryBuilder::for(Parking_Spot::class)
+         ->allowedFilters(['address', 'price','vehicle_type'])
+         ->get();
+
+        return view('Dashboard.search.custom_search.parking_spot.custom_parking_search', compact('array'));
+    }
+    function parking_spot_custom_details($id){
+          $array= Parking_Spot:: findOrFail($id);
+          return view('Dashboard.search.custom_search.parking_spot.custom_parking_details',compact('array'));
+        }
+//end parking spot
+//resort
+    function restaurant_search (){
+      $array = QueryBuilder::for(Restaurant::class)
+         ->allowedFilters(['address', 'price','vehicle_type','wifi','attached_toilet','utilities','lift','furnished','attached_varanda','hot_water',
+         'laundry','ac','cable_tv','parking','dining','spa','gym','sports','swimmingpool','price'])
+         ->get();
+
+        return view('Dashboard.search.custom_search.resort.custom_restaurant_search', compact('array'));
+    }
+    function restaurant_custom_details($id){
+          $array= Restaurant:: findOrFail($id);
+          return view('Dashboard.search.custom_search.resort.custom_restaurant_details',compact('array'));
+        }
+//end resort
 //end custom search
 }

@@ -35,8 +35,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 
-        <title>ToletX-Hostel</title>
+
+    <title>ToletX-Search</title>
   </head>
   <body>
 
@@ -45,115 +47,127 @@
           <!-- Header Start -->
     <header class="mt-4">
         <div class="container-fluid">
-            <div class="row main-search">
 
-            </div>
             <div class="row row1">
                 <div class="col-md-7 mx-4">
                     <div class="row  ">
-                    <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('hostel')}}'">
-                                <span class="icon-hostel service_item"></span>
-                                    <br>
-                                <span class="service_item_name"> Hostel</span>
-                        </div>
+                      <div class="col-md-2 col-small mx-2 main-service text-center" onclick="location.href='{{route('hotel')}}'">
+                                  <span class="icon-resort service_item"></span>
+                                      <br>
+                                  <span class="service_item_name">Resort</span>
+                          </div>
                     </div>
-                    <div class="row ml-4 mr-4 ">
-                        <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" action="{{route('hostel_search')}}" role = "form">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label=" location" >
-                                    </div>
-                                    <div class="col-md-2 mt-2  top-from">
-                                    <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
-                                    </div>
-                                    <div class="col-md-2  mt-2  top-from">
-                                    <input type="date" class="form-control" id="check-out-date" placeholder="Add Dates" aria-label="Add Dates">
-                                    </div>
-                                    <div class="col-md-2  mt-2 top-from">
-                                    <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
-                                    </div>
-                                    <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="submit" class="form-control btn btn-danger" placeholder="Search" value="Search" >
-                                    </div>
-                                </div>
-                          <!-- Checkbox filters -->
-                      <div class="mt-3">
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" name="attached_toilet" id="attached_toilet" value="Attached">
-                                <label class="form-check-label checkboxes-label" for="attached_toilet">Attached Toilet</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" name="attached_varanda" id="attached_veranda" value="Attached">
-                                <label class="form-check-label checkboxes-label" for="attached_veranda">Attached Veranda</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox"name="hot_water" id="hot_water" value="hot">
-                                <label class="form-check-label checkboxes-label" for="hot_water">Hot Water</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox"name="ac" id="ac" value="ac">
-                                <label class="form-check-label checkboxes-label" for="ac">A.C</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox"name="wifi" id="wifi" value="wifi">
-                                <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
-                            </div>
-                      <div class="mt-3">
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox"name="laundry" id="laundry" value="laundry">
-                                <label class="form-check-label checkboxes-label" for="laundry">Laundry</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox"name="lift" id="lift" value="lift"  >
-                                <label class="form-check-label checkboxes-label" for="lift">Lift</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" name="furnished" id="furnished" value="furnished">
-                                <label class="form-check-label checkboxes-label" for="furnished">Furnished</label>
-                            </div>
-                        <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" name="cable_tv" id="cableTv" value="cable">
-                                <label class="form-check-label checkboxes-label" for="cableTv">Cable TV</label>
-                            </div>
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
-                                <label class="form-check-label checkboxes-label" for="parking">Parking</label>
-                            </div>
 
-                            <div class="mt-3">
-
-                            </div>
-                      </div>
-                      </div>
-                     <div class="mt-3 ml-3">
-                     <span class="checkboxes-label">Price Range</span>
-        <input type="range" value="24" min="0" max="100000" oninput="this.nextElementSibling.value = this.value">
-               <output class="checkboxes-label">24</output>
-                     </div>
-
-                            </form>
-                        </div>
-                </div>
-
-                </div>
-
-
-                @include('frontend.profile_info')
-                </div>
             </div>
         </div>
     </header>
     <!-- Header End -->
 
-
-   <!-- Section Start -->
-   <section class="pt-5 pb-5">
+  <!-- Section Start -->
+  <section class="pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <!-- slider section -->
-                <div class="col-8 slider-center slide-show">
-                          @include('frontend.slider_section')
+                <div class="col-8 slider-center slide-show ">
+                 <link rel="stylesheet" href="{{asset('Frontend/assets/css/slick-slider.css')}}">
+                 <!--Slick CSS-->
+                 <link
+                   rel="stylesheet"
+                   type="text/css"
+                   href="{{asset('Frontend/assets/css/slick-theme.css')}}"
+                 />
+                 <script
+                   type="text/javascript"
+                   src="{{asset('Frontend/assets/js/slick.js')}}"
+                 ></script>
+
+                 <body class="snippet-body">
+                 <div class="items">
+
+                   @if($array->isNotEmpty())
+                   @foreach($array as $arrays)
+                     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
+                       <img
+                         src="{{ asset('uploads/restaurants') }}/{{ $arrays->photo }}"
+                         class="card-img-top"
+                         alt="..."
+                       />
+                       <div class="card-body main-slider-body main-slider-body">
+                         <h5 class="card-title main-slider">{{ $arrays->price }}/Night</h5>
+                         <p class="card-text main-slider">{{ $arrays->type }}</p>
+                         <p class="card-text main-slider">{{ $arrays->address }}</p>
+                         <span class=" main-slider">
+                           <i class="fas fa-shower"></i>
+                           <i class="fas fa-wifi"></i>
+                           <i class="fas fa-smoking"></i>
+                         </span>
+                         <p class="mt-3 main-slider">
+                           <i class="fas fa-border-all"></i>
+                           <span>3600 sqft</span>
+                         </p>
+                         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
+                           <a href="{{ url('restaurant/custom/search/details') }}/{{ $arrays->id }}" class="btn  ">Check Details</a>
+                         </button>
+
+                       </div>
+                     </div>
+                     @endforeach
+                     @else
+                         <div>
+                             <h2>No posts found</h2>
+                         </div>
+                     @endif
+                   </div>
+
+
+                 <script type="text/javascript" src=""></script>
+                 <script type="text/javascript" src=""></script>
+                 <script type="text/Javascript">
+                   $(document).ready(function(){
+
+                   $('.items').slick({
+                       infinite: true,
+                       lazyLoad: 'ondemand',
+                       slidesToShow: 3,
+                       slidesToScroll: 3,
+                       autoplay: true,
+                       autoplaySpeed: 10000,
+                       responsive: [
+                     {
+                       breakpoint: 1024,
+                       settings: {
+                         slidesToShow: 3,
+                         slidesToScroll: 3,
+                         infinite: true,
+                         dots: true
+                       }
+                     },
+                     {
+                       breakpoint: 600,
+                       settings: {
+                         slidesToShow: 2,
+                         slidesToScroll: 2
+                       }
+                     },
+                     {
+                       breakpoint: 480,
+                       settings: {
+                         slidesToShow: 1,
+                         slidesToScroll: 1
+                       }
+                     }
+                     // You can unslick at a given breakpoint now by adding:
+                     // settings: "unslick"
+                     // instead of a settings object
+                   ]
+
+                       });
+
+                   });
+                 </script>
+                 </body>
+                 </html>
+
                 </div>
                 <!-- slider section -->
 
@@ -167,7 +181,6 @@
         </div>
     </section>
     <!-- Section End -->
-
 
 
     @include('frontend.footer')
