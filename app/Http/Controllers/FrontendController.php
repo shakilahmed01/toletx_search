@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Bilboard;
 class FrontendController extends Controller
 {
     //
@@ -36,7 +37,8 @@ class FrontendController extends Controller
         return view('frontend.after_login_home');
     }
     function profile(){
-        return view('frontend.profile');
+      $lists=Bilboard::all();
+        return view('frontend.profile',compact('lists'));
     }
     function profile_info(){
         return view('frontend.profile_info');

@@ -59,10 +59,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('community_search')}}" method="get" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label=" location">
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label=" location">
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
@@ -74,7 +74,7 @@
                                     <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
                                     </div>
                                     <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="button"class="form-control btn btn-danger"  id="" value="Search">
+                                        <input type="submit" class="form-control btn btn-danger"  id="" value="Search">
                                     </div>
                                 </div>
                          <!-- Checkbox filters -->
@@ -170,7 +170,7 @@
 
 
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

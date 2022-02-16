@@ -226,154 +226,125 @@
                              </div>
                          </div>
                          <div class="tab-pane fade" id="customer_need" role="tabpanel" aria-labelledby="customer_need-tab">
-                             <div class="p-3 py-5">
-                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                     <h4 class="text-right">advertise Information</h4>
-                                 </div>
-                                 <div class="row mt-2">
-                                     <div class="col-md-12">
-                                         <label class="labels">
-                                             <i class="icofont-hotel-boy"></i>
-                                             <span class="info-type">Name : </span>
-                                             <span class="info">ad</span>
-                                         </label>
-                                     </div>
-                                     <div class="col-md-12">
-                                         <label class="labels">
-                                             <i class="icofont-user-male"></i>
-                                             <span class="info-type">AD Type :</span>
-                                             <span class="info">house</span>
-                                         </label>
-                                     </div>
-                                     <div class="col-md-12">
-                                         <label class="labels">
-                                             <i class="icofont-user-female"></i>
+                           <!DOCTYPE html>
+                           <html>
+                           <head>
+                            <!-- Basic Page Info -->
+                            <meta charset="utf-8">
+                            <title>toletx</title>
 
-                                             <span class="info-type">Area  :</span>
-                                             <span class="info">Nurjahan Road</span>
+                            @include('Dashboard.css.css')
+                           </head>
+                           <body>
 
-                                         </label>
-                                     </div>
-                                     <div class="col-md-12">
-                                         <label class="labels">
-                                             <i class="icofont-phone"></i>
-                                             <span class="info-type">Phone Number :</span>
-                                             <span class="info">0152000000001</span>
-                                         </label>
-                                     </div>
-                                 </div>
+                            <div class="mobile-menu-overlay"></div>
 
-                             </div>
+                            <div class="main-container">
+                              <div class="pd-ltr-20 xs-pd-20-10">
+                                <div class="min-height-200px">
+                                  <div class="page-header">
+                                    <div class="row">
+                                      <div class="col-md-6 col-sm-12">
+                                        <div class="title">
+                                          <h4>Billboard Details</h4>
+                                        </div>
+                                        <nav aria-label="breadcrumb" role="navigation">
+                                          <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">List Billboard</li>
+                                          </ol>
+                                        </nav>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12 text-right">
+                                        <div class="dropdown">
+                                          <a class="btn btn-primary dropdown-toggle" id="datetime" href="#" role="button" data-toggle="dropdown">
+
+                                          </a>
+                                           <script>
+                                           var dt = new Date();
+                                           document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+                                           </script>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">Export List</a>
+                                            <a class="dropdown-item" href="#">Policies</a>
+                                            <a class="dropdown-item" href="#">View Assets</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- basic table  Start -->
+                                  <div class="pd-20 card-box mb-30">
+                                    <div class="clearfix mb-20">
+                                      <div class="pull-left">
+                                        <h4 class="text-blue h4">List Table</h4>
+
+                                      </div>
+
+                                    </div>
+                                    <table id="tblStocks" class="table">
+                                      <thead>
+                                        <tr>
+                                           <th scope="col">Id</th>
+                                           <th scope="col">Address</th>
+                                           <th scope="col">Type</th>
+                                           <th scope="col">Size</th>
+                                           <th scope="col">Asking Rent/Cost + Service Charge</th>
+                                           <th scope="col">Electricity</th>
+                                           <th scope="col">Image</th>
+                                           <th scope="col">Action</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                         @foreach($lists as $list)
+                                         <tr>
+                                           <th scope="row">{{$list->user_id}}</th>
+                                           <td>{{$list->address}}</td>
+                                           <td>{{$list->type}}</td>
+                                           <td>{{$list->size}}</td>
+                                           <td>{{$list->price}}</td>
+                                           <td>{{$list->electricity}}</td>
+
+                                           <td>
+                                           <img src="{{ asset('uploads/bilboards') }}/{{ $list->photo }}" alt="">
+                                           </td>
+                                           <td>
+                                             <a href="{{ url('/bilboard/edit/') }}/{{ $list->id }}" class=" btn-sm btn-primary">Edit</a>
+                                             <hr>
+                                             <a href="{{ url('bilboard/delete') }}/{{ $list->id }}" onclick="confirmAction()" class=" btn-sm btn-danger">Delete</a>
+
+                                           </td>
+                                         </tr>
+                                     @endforeach
+
+                                      </tbody>
+                                    </table>
+
+                                  </div>
+                                  <!-- basic table  End -->
+
+
+                                  <!-- basic table  End -->
+
+                        
+                                  </div>
+                                  <!-- Contextual classes End -->
+                                </div>
+
+                              </div>
+                            </div>
+                            <!-- js -->
+                           @include('Dashboard.js.js')
+                           </body>
+                           </html>
+
                          </div>
                      </div>
                  </div>
 
 
                  @include('frontend.profile_info')
-                 <hr>
-                 <div class="row ml-4 mr-4 ">
-                     <div class="col-md-12">
-                         <div class="container container-fluid">
-                             <form class="form-horizontal top-form" role="form">
-                                 <div class="row justify-content-center">
-                                     <div class="col-md-2 mb-2 ml-2 top-from">
-                                         <input type="text" class="form-control" id="location" placeholder="Location"
-                                             aria-label="First name">
-                                     </div>
-                                     <div class="col-md-2 mb-2  ml-2 top-from">
-                                         <input type="date" class="form-control" id="check-in-date"
-                                             placeholder="Add Dates" aria-label="Add Dates">
-                                     </div>
-                                     <div class="col-md-2  mb-2  ml-2 top-from">
-                                         <input type="date" class="form-control" id="check-out-date"
-                                             placeholder="Add Dates" aria-label="Add Dates">
-                                     </div>
-                                     <div class="col-md-2 mb-2 ml-2 mr-2 top-from">
-                                         <input type="number" class="form-control" id="guest-count" placeholder="Guests"
-                                             aria-label="Guests">
-                                     </div>
-                                     <div class="col-md-2 mb-2 top-from top-from-submit">
-                                         <input type="button" class="form-control btn btn-danger" id="" value="Search">
-                                     </div>
-                                 </div>
-                                 <!-- Checkbox filters -->
-                                 <div class="mt-3">
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input " type="checkbox" id="wifi" value="wifi">
-                                         <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
-                                     </div>
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="bathroom" value="bathroom">
-                                         <label class="form-check-label checkboxes-label"
-                                             for="bathroom">Bathroom</label>
-                                     </div>
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="lift" value="lift">
-                                         <label class="form-check-label checkboxes-label" for="lift">Lift</label>
-                                     </div>
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="furnished"
-                                             value="furnished">
-                                         <label class="form-check-label checkboxes-label"
-                                             for="furnished">Furnished</label>
-                                     </div>
-                                 </div>
-                                 <div class="mt-3">
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="cctv" value="cctv">
-                                         <label class="form-check-label checkboxes-label" for="cctv">CCTV</label>
-                                     </div>
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="security" value="security">
-                                         <label class="form-check-label checkboxes-label"
-                                             for="security">Security</label>
-                                     </div>
-                                     <div class="form-check form-check-inline ml-3">
-                                         <input class="form-check-input" type="checkbox" id="parking" value="parking">
-                                         <label class="form-check-label checkboxes-label" for="parking">Parking</label>
-                                     </div>
-                                 </div>
-                         </div>
-                         <div class="mt-3 ml-3">
-                             <span class="checkboxes-label ">Price Range</span>
 
-                             <input type="range" value="24" min="0" max="100000"
-                                 oninput="this.nextElementSibling.value = this.value">
-                             <output class="checkboxes-label">24</output>
-                         </div>
-
-                         </form>
-                     </div>
-                 </div>
-
-             </div>
-
-         </div>
-         </div>
-         </div>
-     </header>
-     <!-- Header End -->
-
-     <!-- Section Start -->
-     <section class="pt-5 pb-5">
-         <div class="container">
-             <div class="row">
-                 <!-- slider section -->
-                 <div class="col-8 slider-center slide-show">
-                     @include('frontend.slider_section')
-                 </div>
-                 <!-- slider section -->
-
-                 <!-- ad section -->
-                 <div class="col-md-4 mb-3  advert">
-                     @include('frontend.advertise')
-                 </div>
-                 <!-- ad section -->
-
-             </div>
-         </div>
-     </section>
-     <!-- Section End -->
 
 
      @include('frontend.footer')

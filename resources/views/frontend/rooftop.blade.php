@@ -58,10 +58,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('rooftop_search')}}" method="get" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label=" location">
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label=" location">
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
@@ -73,45 +73,41 @@
                                     <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
                                     </div>
                                     <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="button"class="form-control btn btn-danger"  id="" value="Search">
+                                        <input type="submit" class="form-control btn btn-danger"  id="" value="Search">
                                     </div>
                                 </div>
                         <!-- Checkbox filters -->
                       <div class="mt-3">
-                            <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="attached_toilet" value="wifi">
-                                <label class="form-check-label checkboxes-label" for="attached_toilet">Attached Toilet</label>
-                            </div>
 
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="wifi" value="wifi">
+                                <input class="form-check-input" type="checkbox" name="wifi" id="wifi" value="wifi">
                                 <label class="form-check-label checkboxes-label" for="wifi">Wifi</label>
                             </div>
                       <div class="mt-3">
 
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="lift" value="lift"  >
+                                <input class="form-check-input" type="checkbox" name="lift" id="lift" value="lift"  >
                                 <label class="form-check-label checkboxes-label" for="lift">Lift</label>
                             </div>
 
 
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="parking" value="parking"  >
+                                <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
                                 <label class="form-check-label checkboxes-label" for="parking">Parking</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="dining" value="dining"  >
-                                <label class="form-check-label checkboxes-label" for="dining">Dining</label>
+                                <input class="form-check-input" type="checkbox" name="utilities" id="dining" value="utilities"  >
+                                <label class="form-check-label checkboxes-label" for="dining">Utilities</label>
                             </div>
                             <div class="mt-3">
                               <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="swimming_pool" value="swimming_pool"  >
-                                  <label class="form-check-label checkboxes-label" for="swimming_pool">Swimming Pool</label>
+                                  <input class="form-check-input" type="checkbox" name="shed" id="swimming_pool" value="Shed"  >
+                                  <label class="form-check-label checkboxes-label" for="shade">Shad</label>
                               </div>
 
                               <div class="form-check form-check-inline ml-3">
-                                  <input class="form-check-input" type="checkbox" id="fire_safety" value="fire_safety"  >
-                                  <label class="form-check-label checkboxes-label" for="fire_safety">Fire Safety</label>
+                                  <input class="form-check-input" type="checkbox" name="parking" id="fire_safety" value="parking"  >
+                                  <label class="form-check-label checkboxes-label" for="fire_safety">Parking</label>
                               </div>
                             </div>
                       </div>
@@ -159,7 +155,7 @@
     <!-- Section End -->
 
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 

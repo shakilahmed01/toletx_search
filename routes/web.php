@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Spatie\QueryBuilder\QueryBuilder;
-use App\Models\Hotel;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +13,9 @@ use App\Models\Hotel;
 |
 */
 
-Route::get('/ss', function () {
-  $users = QueryBuilder::for(Hotel::class)
-     ->allowedFilters(['hotel_name', 'price'])
-    ->get();
-    return $users;
+Route::get('/wanted', [App\Http\Controllers\UserWantedController::class, 'wanted_form'])->name('wanted_form');
+Route::get('/post/bilboard', [App\Http\Controllers\UserWantedController::class, 'post_bilboard'])->name('post_bilboard');
 
-    return view('welcome');
-});
 
 Route::get('/firebase', [App\Http\Controllers\TestController::class, 'index1']);
 
@@ -47,6 +41,8 @@ Route::get('/bilboard/custom/search/details/{id}',[App\Http\Controllers\CustomSe
 //community center search
 Route::get('community/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('community.show');
 Route::get('/community/details/{id}',[App\Http\Controllers\TestController::class, 'community_details'])->name('community_details');
+Route::get('/community/custom/search',[App\Http\Controllers\CustomSearchController::class, 'community_search'])->name('community_search');
+Route::get('/community/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'community_custom_details'])->name('community_custom_details');
 //end community center
 Route::get('exibution/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('exibution.show');
 Route::get('factory/{id}',[App\Http\Controllers\TestController::class, 'cshow'] )->name('factory.show');
@@ -56,57 +52,97 @@ Route::get('/flat/details/{id}',[App\Http\Controllers\TestController::class, 'fl
 Route::get('/flat/custom/search',[App\Http\Controllers\CustomSearchController::class, 'flat_search'])->name('flat_search');
 Route::get('/flat/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'flat_custom_details'])->name('flat_custom_details');
 //end flat
+
 //land search
 Route::get('land/{id}',[App\Http\Controllers\TestController::class, 'lshow'] )->name('land.show');
 Route::get('/land/details/{id}',[App\Http\Controllers\TestController::class, 'land_details'])->name('land_details');
+Route::get('/land/custom/search',[App\Http\Controllers\CustomSearchController::class, 'land_search'])->name('land_search');
+Route::get('/land/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'land_custom_details'])->name('land_custom_details');
 //end land
+
 //office search
 Route::get('office/{id}',[App\Http\Controllers\TestController::class, 'oshow'] )->name('office.show');
 Route::get('/office/details/{id}',[App\Http\Controllers\TestController::class, 'office_details'])->name('office_details');
+Route::get('/office/custom/search',[App\Http\Controllers\CustomSearchController::class, 'office_search'])->name('office_search');
+Route::get('/office/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'office_custom_details'])->name('office_custom_details');
 //end office
+
 //parking search
 Route::get('parking/{id}',[App\Http\Controllers\TestController::class, 'pshow'] )->name('parking.show');
 Route::get('/parking/details/{id}',[App\Http\Controllers\TestController::class, 'parking_details'])->name('parking_details');
 Route::get('/parking/custom/search',[App\Http\Controllers\CustomSearchController::class, 'parking_spot_search'])->name('parking_spot_search');
 Route::get('/parking/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'parking_spot_custom_details'])->name('parking_spot_custom_details');
-
 //end parking search
+
 //playground search
 Route::get('playground/{id}',[App\Http\Controllers\TestController::class, 'plshow'] )->name('playground.show');
 Route::get('/playground/details/{id}',[App\Http\Controllers\TestController::class, 'playground_details'])->name('playground_details');
-//end play post_playground_information
+Route::get('/playground/custom/search',[App\Http\Controllers\CustomSearchController::class, 'playground_search'])->name('playground_search');
+Route::get('/playground/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'playground_custom_details'])->name('playground_custom_details');
+//end playground
+
 //restaurant search
 Route::get('restaurant/{id}',[App\Http\Controllers\TestController::class, 'resortshow'] )->name('restaurant.show');
 Route::get('/restaurant/details/{id}',[App\Http\Controllers\TestController::class, 'restaurant_details'])->name('restaurant_details');
 Route::get('/restaurant/custom/search',[App\Http\Controllers\CustomSearchController::class, 'restaurant_search'])->name('restaurant_search');
 Route::get('/restaurant/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'restaurant_custom_details'])->name('restaurant_custom_details');
 //end restaurant
+
 //rooftop search
 Route::get('rooftop/{id}',[App\Http\Controllers\TestController::class, 'rooftopshow'] )->name('rooftop.show');
 Route::get('/rooftop/details/{id}',[App\Http\Controllers\TestController::class, 'rooftop_details'])->name('rooftop_details');
+Route::get('/rooftop/custom/search',[App\Http\Controllers\CustomSearchController::class, 'rooftop_search'])->name('rooftop_search');
+Route::get('/rooftop/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'rooftop_custom_details'])->name('rooftop_custom_details');
 //end rooftop
+
 //room search
 Route::get('room/{id}',[App\Http\Controllers\TestController::class, 'rshow'] )->name('room.show');
 Route::get('/room/details/{id}',[App\Http\Controllers\TestController::class, 'room_details'])->name('room_details');
 Route::get('/room/custom/search',[App\Http\Controllers\CustomSearchController::class, 'room_search'])->name('room_search');
 Route::get('/room/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'room_custom_details'])->name('room_custom_details');
 //end room
+
 //shooting search
 Route::get('shooting/{id}',[App\Http\Controllers\TestController::class, 'shootingshow'] )->name('shooting.show');
 Route::get('/shooting/details/{id}',[App\Http\Controllers\TestController::class, 'shooting_details'])->name('shooting_details');
+Route::get('/shootingspot/custom/search',[App\Http\Controllers\CustomSearchController::class, 'shootingspot_search'])->name('shootingspot_search');
+Route::get('/shootingspot/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'shootingspot_custom_details'])->name('shootingspot_custom_details');
 //end shooting
 //shop search
 Route::get('shop/{id}',[App\Http\Controllers\TestController::class, 'shopshow'] )->name('shop.show');
 Route::get('/shop/details/{id}',[App\Http\Controllers\TestController::class, 'shop_details'])->name('shop_details');
+Route::get('/shop/custom/search',[App\Http\Controllers\CustomSearchController::class, 'shop_search'])->name('shop_search');
+Route::get('/shop/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'shop_custom_details'])->name('shop_custom_details');
 //end shop
+
 //swimmingpool search
 Route::get('swimmingpool/{id}',[App\Http\Controllers\TestController::class, 'swimmingpoolshow'] )->name('swimmingpool.show');
 Route::get('/swimmingpool/details/{id}',[App\Http\Controllers\TestController::class, 'swimmingpool_details'])->name('swimmingpool_details');
+Route::get('/swimmingpool/custom/search',[App\Http\Controllers\CustomSearchController::class, 'swimmingpool_search'])->name('swimmingpool_search');
+Route::get('/swimmingpool/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'swimmingpool_custom_details'])->name('swimmingpool_custom_details');
 //end swimmingpool
+
 //warehouse search
 Route::get('warehouse/{id}',[App\Http\Controllers\TestController::class, 'warehouseshow'] )->name('warehouse.show');
 Route::get('/warehouse/details/{id}',[App\Http\Controllers\TestController::class, 'warehouse_details'])->name('warehouse_details');
+Route::get('/warehouse/custom/search',[App\Http\Controllers\CustomSearchController::class, 'warehouse_search'])->name('warehouse_search');
+Route::get('/warehouse/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'warehouse_custom_details'])->name('warehouse_custom_details');
 //end warehouse
+
+//pond search
+Route::get('pond/{id}',[App\Http\Controllers\TestController::class, 'pondshow'] )->name('pond.show');
+Route::get('/pond/details/{id}',[App\Http\Controllers\TestController::class, 'pond_details'])->name('pond_details');
+Route::get('/pond/custom/search',[App\Http\Controllers\CustomSearchController::class, 'pond_search'])->name('pond_search');
+Route::get('/pond/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'pond_custom_details'])->name('pond_custom_details');
+//end pond
+
+//Exibution search
+Route::get('exibution/{id}',[App\Http\Controllers\TestController::class, 'exibutionshow'] )->name('exibution.show');
+Route::get('/exibution/details/{id}',[App\Http\Controllers\TestController::class, 'exibution_details'])->name('exibution_details');
+Route::get('/exibution/custom/search',[App\Http\Controllers\CustomSearchController::class, 'exibution_search'])->name('exibution_search');
+Route::get('/exibution/custom/search/details/{id}',[App\Http\Controllers\CustomSearchController::class, 'exibution_custom_details'])->name('exibution_custom_details');
+//end Exibution
+
 //end All Search
 
 

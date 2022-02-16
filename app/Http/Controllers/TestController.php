@@ -286,6 +286,12 @@ class TestController extends Controller
             'interior_condition',
             'drainage_system',
             'parking',
+            'price',)->registerModel(Pond::class,
+            'address',
+            'purpose',
+            'drainage_system',
+            'water_level',
+            'pond_area',
             'price',)
             ->perform($request->input('query'));
 
@@ -438,6 +444,24 @@ class TestController extends Controller
       return view('Dashboard.search.single_bilboard_list',compact('list'));
     }
 //end billboard
+    function pondshow(){
+      $ponds=Pond::all();
+      return view('Dashboard.search.pond',compact('ponds'));
+    }
+    function pond_details($id){
+      $list=Pond::findOrFail($id);
+      return view('Dashboard.search.single_pond_list',compact('list'));
+    }
+//end pond
+    function exibutionshow(){
+      $exibutions=Exibution::all();
+      return view('Dashboard.search.exibution',compact('exibutions'));
+    }
+    function exibution_details($id){
+      $list=Exibution::findOrFail($id);
+      return view('Dashboard.search.single_exibution_list',compact('list'));
+    }
+//end exibution
 
 
   function index1(){

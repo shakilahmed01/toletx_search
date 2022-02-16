@@ -1423,6 +1423,7 @@ class DashboardController extends Controller
       function post_bilboard_information(Request $request){
 
         $bilboard=Bilboard::insertGetId([
+          'user_id'=>$request->user_id,
           'type'=>$request->type,
           'address'=>$request->address,
           'size'=>$request->size,

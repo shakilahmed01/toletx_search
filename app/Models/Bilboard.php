@@ -13,6 +13,7 @@ class Bilboard extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
 
+        'user_id',
         'address',
         'type',
         'size',
@@ -32,4 +33,8 @@ class Bilboard extends Model implements Searchable
                 $url
             );
         }
+    function BilboardrelationBetweenUser()
+          {
+          return $this->hasOne('App\Models\User','id','user_id');
+          }
 }

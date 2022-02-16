@@ -43,7 +43,9 @@
                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
              </div>
              <div class="offcanvas-body">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <form action="{{route('search')}}" method="get">
+                <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+              </form>
                  <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium ratione commodi quas voluptates enim asperiores. Unde soluta minima eligendi.
                  </p>

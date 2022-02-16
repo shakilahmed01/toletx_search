@@ -58,10 +58,10 @@
                     </div>
                     <div class="row ml-4 mr-4 ">
                         <div class="container container-fluid">
-                            <form class = "form-horizontal top-form" role = "form">
+                            <form class = "form-horizontal top-form" action="{{route('warehouse_search')}}" method="get" role = "form">
                                 <div class="row justify-content-center">
                                     <div class="col-md-2 mt-2 top-from">
-                                    <input type="text" class="form-control" id="location" placeholder="Location" aria-label=" location">
+                                    <input type="text" class="form-control" id="location" name="address" placeholder="Location" aria-label=" location">
                                     </div>
                                     <div class="col-md-2 mt-2  top-from">
                                     <input type="date" class="form-control" id="check-in-date" placeholder="Add Dates" aria-label="Add Dates">
@@ -73,46 +73,42 @@
                                     <input type="number" class="form-control" id="guest-count" placeholder="Guests" aria-label="Guests">
                                     </div>
                                     <div class="col-sm-4 mt-2  top-from ">
-                                        <input type="button"class="form-control btn btn-danger"  id="" value="Search">
+                                        <input type="submit" class="form-control btn btn-danger"  id="" value="Search">
                                     </div>
                                 </div>
                           <!-- Checkbox filters -->
                       <div class="mt-3">
 
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="ac" value="ac">
+                              <input class="form-check-input" type="checkbox" name="ac" id="ac" value="ac">
                               <label class="form-check-label checkboxes-label" for="ac">A.C</label>
                           </div>
 
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="individual" value="individual">
-                              <label class="form-check-label checkboxes-label" for="individual">Individual</label>
-                          </div>
-                          <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="running_condition" value="running_condition">
+                              <input class="form-check-input" type="checkbox" name="interior_condition" id="running_condition" value="running_condition">
                               <label class="form-check-label checkboxes-label" for="running_condition">Running Condition </label>
                           </div>
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="drainage_system" value="drainage_system">
+                              <input class="form-check-input" type="checkbox" name="drainage_system" id="drainage_system" value="drainage_system">
                               <label class="form-check-label checkboxes-label" for="drainage_system">Drainage System</label>
                           </div>
                     <div class="mt-3">
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="lift" value="lift"  >
+                              <input class="form-check-input" type="checkbox" name="lift" id="lift" value="lift"  >
                               <label class="form-check-label checkboxes-label" for="lift">Lift</label>
                           </div>
                           <div class="form-check form-check-inline ml-3">
-                              <input class="form-check-input" type="checkbox" id="parking" value="parking"  >
+                              <input class="form-check-input" type="checkbox" name="parking" id="parking" value="parking"  >
                               <label class="form-check-label checkboxes-label" for="parking">Parking</label>
                           </div>
                           <div class="mt-3">
 
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="fire_safety" value="fire_safety"  >
+                                <input class="form-check-input" type="checkbox" name="fire_safety" id="fire_safety" value="fire_safety"  >
                                 <label class="form-check-label checkboxes-label" for="fire_safety">Fire Safety</label>
                             </div>
                             <div class="form-check form-check-inline ml-3">
-                                <input class="form-check-input" type="checkbox" id="emergency_stair" value="emergency_stair"  >
+                                <input class="form-check-input" type="checkbox" name="" id="emergency_stair" value="emergency_stair"  >
                                 <label class="form-check-label checkboxes-label" for="emergency_stair">Emergency Stair </label>
                             </div>
                           </div>
@@ -160,7 +156,7 @@
   </section>
   <!-- Section End -->
 
-    @include('frontend.footer') 
+    @include('frontend.footer')
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
 
