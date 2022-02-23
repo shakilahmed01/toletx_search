@@ -71,6 +71,8 @@ class DashboardController extends Controller
     function post_hotel_information(Request $request){
 
       $hotel=Hotel::insertGetId([
+        'user_id'=>$request->user_id,
+        'post_type'=>$request->post_type,
         'hotel_name'=>$request->hotel_name,
         'location'=>$request->location,
         'wifi'=>$request->wifi,
@@ -111,6 +113,8 @@ class DashboardController extends Controller
     function hotel_update(Request $request){
 
           $hotel= Hotel::findOrFail($request->id)->update([
+            'user_id'=>$request->user_id,
+            'post_type'=>$request->post_type,
             'hotel_name'=>$request->hotel_name,
             'location'=>$request->location,
             'wifi'=>$request->wifi,
@@ -159,6 +163,8 @@ class DashboardController extends Controller
     function post_room_information(Request $request){
 
       $room=Room::insertGetId([
+        'user_id'=>$request->user_id,
+        'post_type'=>$request->post_type,
         'hotel_name'=>$request->hotel_name,
         'address'=>$request->address,
         'room_size'=>$request->room_size,
@@ -204,6 +210,8 @@ class DashboardController extends Controller
     function room_update(Request $request){
 
           $room=Room::findOrFail($request->id)->update([
+            'user_id'=>$request->user_id,
+            'post_type'=>$request->post_type,
             'hotel_name'=>$request->hotel_name,
             'address'=>$request->address,
             'room_size'=>$request->room_size,
@@ -260,7 +268,8 @@ class DashboardController extends Controller
       function post_flat_information(Request $request){
 
         $flat=Flat::insertGetId([
-
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'flat_size'=>$request->flat_size,
           'description'=>$request->description,
@@ -306,7 +315,8 @@ class DashboardController extends Controller
       function flat_update(Request $request){
 
             $flat=Flat::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'room_size'=>$request->room_size,
               'attached_toilet'=>$request->attached_toilet,
@@ -361,7 +371,8 @@ class DashboardController extends Controller
         function post_parking_spot_information(Request $request){
 
           $parking=Parking_Spot::insertGetId([
-
+            'user_id'=>$request->user_id,
+            'post_type'=>$request->post_type,
             'address'=>$request->address,
             'price'=>$request->price,
             'floor_level'=>$request->floor_level,
@@ -398,7 +409,8 @@ class DashboardController extends Controller
         function parking_spot_update(Request $request){
 
               $parking=Parking_Spot::findOrFail($request->id)->update([
-
+                'user_id'=>$request->user_id,
+                'post_type'=>$request->post_type,
                 'address'=>$request->address,
                 'price'=>$request->price,
                 'floor_level'=>$request->floor_level,
@@ -454,7 +466,8 @@ class DashboardController extends Controller
       function post_hostel_information(Request $request){
 
         $hostel=Hostel::insertGetId([
-
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'hostel_name'=>$request->hostel_name,
           'address'=>$request->address,
           'room_size'=>$request->room_size,
@@ -495,7 +508,8 @@ class DashboardController extends Controller
       function hostel_update(Request $request){
 
             $hostel=Hostel::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'hostel_name'=>$request->hostel_name,
               'address'=>$request->address,
               'room_size'=>$request->room_size,
@@ -556,6 +570,8 @@ class DashboardController extends Controller
       function post_office_information(Request $request){
 
         $office=Office::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
           'floor_size'=>$request->floor_size,
@@ -597,7 +613,8 @@ class DashboardController extends Controller
       function office_update(Request $request){
 
             $office=Office::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
               'floor_size'=>$request->floor_size,
@@ -653,7 +670,8 @@ class DashboardController extends Controller
       function post_land_information(Request $request){
 
         $land=Land::insertGetId([
-
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'land_area'=>$request->land_area,
           'vegetations'=>$request->vegetations,
@@ -689,7 +707,8 @@ class DashboardController extends Controller
       function land_update(Request $request){
 
             $land=Land::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'land_area'=>$request->land_area,
               'vegetations'=>$request->vegetations,
@@ -739,6 +758,8 @@ class DashboardController extends Controller
       function post_community_information(Request $request){
 
         $community=Community_Center::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'community_name'=>$request->community_name,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
@@ -784,7 +805,8 @@ class DashboardController extends Controller
       function community_update(Request $request){
 
             $community=Community_Center::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'community_name'=>$request->community_name,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
@@ -842,6 +864,8 @@ class DashboardController extends Controller
       function post_shooting_information(Request $request){
 
         $shooting=Shooting_Spot::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'shooting_name'=>$request->shooting_name,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
@@ -888,7 +912,8 @@ class DashboardController extends Controller
       function shooting_update(Request $request){
 
             $shooting=Shooting_Spot::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'shooting_name'=>$request->shooting_name,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
@@ -947,6 +972,8 @@ class DashboardController extends Controller
       function post_shop_information(Request $request){
 
         $shop=Shop::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
           'floor_size'=>$request->floor_size,
@@ -988,7 +1015,8 @@ class DashboardController extends Controller
       function shop_update(Request $request){
 
             $shop=Shop::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
               'floor_size'=>$request->floor_size,
@@ -1043,6 +1071,8 @@ class DashboardController extends Controller
       function post_factory_information(Request $request){
 
         $factory=Factory::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'factory_name'=>$request->factory_name,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
@@ -1086,7 +1116,8 @@ class DashboardController extends Controller
       function factory_update(Request $request){
 
             $factory=Factory::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'factory_name'=>$request->factory_name,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
@@ -1144,6 +1175,8 @@ class DashboardController extends Controller
       function post_warehouse_information(Request $request){
 
         $warehouse=Warehouse::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'type'=>$request->type,
           'address'=>$request->address,
           'floor_level'=>$request->floor_level,
@@ -1187,7 +1220,8 @@ class DashboardController extends Controller
       function warehouse_update(Request $request){
 
             $warehouse=Warehouse::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'type'=>$request->type,
               'address'=>$request->address,
               'floor_level'=>$request->floor_level,
@@ -1244,6 +1278,8 @@ class DashboardController extends Controller
       function post_pond_information(Request $request){
 
         $pond=Pond::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'purpose'=>$request->purpose,
           'pond_area'=>$request->pond_area,
@@ -1281,7 +1317,8 @@ class DashboardController extends Controller
       function pond_update(Request $request){
 
             $pond=Pond::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'purpose'=>$request->purpose,
               'pond_area'=>$request->pond_area,
@@ -1329,6 +1366,8 @@ class DashboardController extends Controller
       function post_swimmingpool_information(Request $request){
 
         $swimmingpool=Swimming_Pool::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'type'=>$request->type,
           'address'=>$request->address,
           'size'=>$request->size,
@@ -1369,7 +1408,8 @@ class DashboardController extends Controller
       function swimmingpool_update(Request $request){
 
             $swimmingpool=Swimming_Pool::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'type'=>$request->type,
               'address'=>$request->address,
               'size'=>$request->size,
@@ -1424,6 +1464,7 @@ class DashboardController extends Controller
 
         $bilboard=Bilboard::insertGetId([
           'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'type'=>$request->type,
           'address'=>$request->address,
           'size'=>$request->size,
@@ -1460,7 +1501,8 @@ class DashboardController extends Controller
       function bilboard_update(Request $request){
 
             $bilboard=Bilboard::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'type'=>$request->type,
               'address'=>$request->address,
               'size'=>$request->size,
@@ -1510,6 +1552,8 @@ class DashboardController extends Controller
       function post_rooftop_information(Request $request){
 
         $rooftop=Rooftop::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'floor_area'=>$request->floor_area,
           'utilities'=>$request->utilities,
@@ -1549,7 +1593,8 @@ class DashboardController extends Controller
       function rooftop_update(Request $request){
 
             $rooftop=Rooftop::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'floor_area'=>$request->floor_area,
               'utilities'=>$request->utilities,
@@ -1600,6 +1645,8 @@ class DashboardController extends Controller
       function post_restuarant_information(Request $request){
 
         $restaurant=Restaurant::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'resort_name'=>$request->resort_name,
           'address'=>$request->address,
           'room_size'=>$request->room_size,
@@ -1651,7 +1698,8 @@ class DashboardController extends Controller
       function restuarant_update(Request $request){
 
             $restaurant=Restaurant::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'resort_name'=>$request->resort_name,
               'address'=>$request->address,
               'room_size'=>$request->room_size,
@@ -1714,6 +1762,8 @@ class DashboardController extends Controller
       function post_exibution_center_information(Request $request){
 
         $exibution_center=Exibution_Center::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'exibution_center_name'=>$request->exibution_center_name,
           'address'=>$request->address,
           'room_size'=>$request->room_size,
@@ -1765,7 +1815,8 @@ class DashboardController extends Controller
       function exibution_center_update(Request $request){
 
             $exibution_center=Exibution_Center::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'exibution_center_name'=>$request->exibution_center_name,
               'address'=>$request->address,
               'room_size'=>$request->room_size,
@@ -1830,6 +1881,8 @@ class DashboardController extends Controller
       function post_playground_information(Request $request){
 
         $playground=Play_ground::insertGetId([
+          'user_id'=>$request->user_id,
+          'post_type'=>$request->post_type,
           'address'=>$request->address,
           'type'=>$request->type,
           'attached_toilet'=>$request->attached_toilet,
@@ -1876,7 +1929,8 @@ class DashboardController extends Controller
       function playground_update(Request $request){
 
             $playground=Play_ground::findOrFail($request->id)->update([
-
+              'user_id'=>$request->user_id,
+              'post_type'=>$request->post_type,
               'address'=>$request->address,
               'type'=>$request->type,
               'attached_toilet'=>$request->attached_toilet,

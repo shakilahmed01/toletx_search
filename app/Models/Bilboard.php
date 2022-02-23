@@ -14,6 +14,7 @@ class Bilboard extends Model implements Searchable
     protected $fillable = [
 
         'user_id',
+        'post_type',
         'address',
         'type',
         'size',
@@ -33,7 +34,7 @@ class Bilboard extends Model implements Searchable
                 $url
             );
         }
-    function BilboardrelationBetweenUser()
+    function Bilboard_relationBetweenUser()
           {
           return $this->hasOne('App\Models\User','id','user_id');
           }

@@ -12,6 +12,8 @@ class Exibution_Center extends Model implements Searchable
     use HasFactory;
     use SoftDeletes;
     protected $fillable = [
+        'user_id',
+        'post_type',
         'exibution_center_name',
         'address',
         'room_type',
@@ -46,4 +48,9 @@ class Exibution_Center extends Model implements Searchable
                 $url
             );
         }
+
+        function Exibution_Center_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

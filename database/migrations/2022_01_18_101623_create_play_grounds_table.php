@@ -15,6 +15,8 @@ class CreatePlayGroundsTable extends Migration
     {
         Schema::create('play_grounds', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('post_type');
             $table->string('address');
             $table->string('type');
             $table->string('wifi')->nullable();

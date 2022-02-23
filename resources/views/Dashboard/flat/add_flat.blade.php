@@ -65,7 +65,25 @@
 												@endif
 					<form method="POST" action="{{ route('post_flat_information') }}" enctype="multipart/form-data">
 						@csrf
+						<div class="col-md-6">
+                <input id="user_id" type="hidden" class="form-control @error('user_id') is-invalid @enderror" name="user_id" value="{{ Auth::user()->id }}" required autocomplete="user_id" autofocus>
 
+                @error('user_id')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-12 col-md-2 col-form-label">Post Type</label>
+              <div class="col-sm-12 col-md-10">
+                <select class="custom-select col-12" name="post_type">
+                  <option selected="">Choose...</option>
+                  <option value="Wanted">Wanted</option>
+                  <option value="Rented">Rented</option>
+                </select>
+              </div>
+            </div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Address</label>
 							<div class="col-sm-12 col-md-10">

@@ -63,7 +63,8 @@
 					<table id="tblStocks" class="table">
 						<thead>
 							<tr>
-                <th scope="col">Id</th>
+								<th scope="col">Id</th>
+                <th scope="col">Post Type</th>
                 <th scope="col">Hotel Name</th>
                 <th scope="col">Address</th>
                 <th scope="col">Asking Rent/Cost + Service Charge</th>
@@ -86,6 +87,7 @@
               @foreach($lists as $list)
               <tr>
                 <th scope="row">{{$list->id}}</th>
+								<td>{{$list->post_type}}</td>
 								<td>{{$list->hotel_name}}</td>
                 <td>{{$list->address}}</td>
                 <td>{{$list->price}}</td>
@@ -132,6 +134,7 @@
 						<thead>
 							<tr>
 								<th scope="col">Id</th>
+								<th scope="col">Post Type</th>
                 <th scope="col">Hotel Name</th>
                 <th scope="col">Address</th>
                 <th scope="col">Asking Rent/Cost + Service Charge</th>
@@ -154,6 +157,7 @@
 							@foreach($trashed_lists as $trashed_list)
 							<tr>
 								<th scope="row">{{$trashed_list->id}}</th>
+								<td>{{$trashed_list->post_type}}</td>
 								<td>{{$trashed_list->hotel_name}}</td>
                 <td>{{$trashed_list->address}}</td>
                 <td>{{$trashed_list->price}}</td>

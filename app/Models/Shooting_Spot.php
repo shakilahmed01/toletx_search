@@ -13,6 +13,8 @@ class Shooting_Spot extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'shooting_name',
+        'user_id',
+        'post_type',
         'address',
         'floor_level',
         'floor_size',
@@ -41,4 +43,9 @@ class Shooting_Spot extends Model implements Searchable
                 $url
             );
         }
+
+        function Shooting_Spot_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

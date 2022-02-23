@@ -15,6 +15,8 @@ class CreateLandsTable extends Migration
     {
         Schema::create('lands', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('post_type');
             $table->string('address');
             $table->string('land_area');
             $table->string('vegetations')->nullable();

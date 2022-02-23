@@ -15,6 +15,8 @@ class CreateRooftopsTable extends Migration
     {
         Schema::create('rooftops', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('post_type');
             $table->string('address');
             $table->string('floor_area');
             $table->string('utilities')->nullable();

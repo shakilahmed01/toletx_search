@@ -13,6 +13,8 @@ class Restaurant extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'resort_name',
+        'user_id',
+        'post_type',
         'address',
         'room_type',
         'room_size',
@@ -46,4 +48,9 @@ class Restaurant extends Model implements Searchable
                 $url
             );
         }
+
+        function Restaurant_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

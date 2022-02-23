@@ -90,7 +90,6 @@
                         </form>
                         </div>
                     </div>
-
                 </div>
             </div>
             @if(Auth::user())
@@ -142,16 +141,155 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
-                        <li><a class="dropdown-item" href="{{route('profile')}}">Post Ad</a></li>
+                        <li><a class="dropdown-item" href="{{route('post_bilboard')}}">Post Add</a></li>
                         <li><a class="dropdown-item" href="#">Privacy</a></li>
                     </ul>
                 </div>
             </div>
+            <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Post your Add
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Service Item</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+             <link rel="stylesheet" href="{{asset('Frontend/assets/css/icon.css')}}">
+             <!-- <link rel="stylesheet" href="{{asset('Frontend/assets/css/service_item.css')}}">       -->
+           <div class="row mt-2   service-group-row">
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 pb-3 main-service text-center " onclick="location.href='{{route('post_room')}}'">
+                                         <span class="icon-room service_item "></span>
+                                             <br>
+                                         <span class="service_item_name"> Room</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_flat')}}'">
+                                         <span class="icon-flat service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Flat</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='#'">
+                                         <span class="icon-building service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Building</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_parking_spot')}}'">
+                                         <span class="icon-parking service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Parking Spot</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_hotel')}}'">
+                                         <span class="icon-hotel service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Hotel</span>
+                                 </div>
+                             </div>
+                             <div class="row mt-2 service-group-row">
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_hostel')}}'">
+                                         <span class="icon-hostel service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Hostel</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_resort')}}'">
+                                         <span class="icon-resort service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Resort</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_office')}}'">
+                                         <span class="icon-office service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Office</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_shop')}}'">
+                                         <span class="icon-shop service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Shop</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_community')}}'">
+                                         <span class="icon-community_hall service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Community  Hall</span>
+                                 </div>
+                             </div>
+                             <div class="row mt-2 service-group-row">
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_factory')}}'">
+                                         <span class="icon-factory service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Factory</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_warehouse')}}'">
+                                         <span class="icon-warehouse service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Warehouse</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_land')}}'">
+                                         <span class="icon-land service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Land</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_pond')}}'">
+                                         <span class="icon-pond service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Pond</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_swimmingpool')}}'">
+                                         <span class="icon-swimming_pool service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">   Swimming Pool</span>
+                                 </div>
+                             </div>
+
+                             <div class="row mt-2 service-group-row">
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_playground')}}'">
+                                         <span class="icon-playground service_item" ></span>
+                                             <br>
+                                         <span class="service_item_name"> Play Ground</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('post_shooting')}}'">
+                                         <span class="icon-shooting_spot service_item" ></span>
+                                             <br>
+                                         <span class="service_item_name"> Shooting Spot</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('post_exhibution')}}'">
+                                         <span class="icon-exhibition_center service_item"></span>
+                                              <br>
+                                         <span class="service_item_name">  Exhibition Center</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_rooftop')}}'">
+                                         <span class="icon-rooftop service_item"></span>
+                                             <br>
+                                         <span class="service_item_name">  Rooftop</span>
+                                 </div>
+                                 <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_bilboard')}}'">
+                                         <span class="icon-bilboard service_item"></span>
+                                             <br>
+                                         <span class="service_item_name"> Bilboard</span>
+                                 </div>
+
+                             </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
             @else
 
             @endif
+
         </div>
-    </form>
+
          </div>
      <hr>
 

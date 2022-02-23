@@ -13,6 +13,8 @@ class Room extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'hotel_name',
+        'user_id',
+        'post_type',
         'address',
         'room_size',
         'attached_toilet',
@@ -40,4 +42,9 @@ class Room extends Model implements Searchable
                 $url
             );
         }
+
+        function Room_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

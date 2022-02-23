@@ -66,6 +66,18 @@
 					<form method="POST" action="{{ route('room_update') }}" enctype="multipart/form-data">
 						@csrf
 						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Post Type</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" value="{{$list->post_type}}" name="address" placeholder="Location" type="text" readonly>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">User ID</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" value="{{$list->user_id}}" name="address" placeholder="Location" type="text" readonly>
+							</div>
+						</div>
+						<div class="form-group row">
               <input type="hidden" name="id" value="{{$list->id}}">
 							<label class="col-sm-12 col-md-2 col-form-label">Hotel Name</label>
 							<div class="col-sm-12 col-md-10">

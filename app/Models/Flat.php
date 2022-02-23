@@ -14,6 +14,8 @@ class Flat extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'address',
+        'user_id',
+        'post_type',
         'flat_size',
         'description',
         'utilities',
@@ -41,4 +43,9 @@ class Flat extends Model implements Searchable
                 $url
             );
         }
+
+        function Flat_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

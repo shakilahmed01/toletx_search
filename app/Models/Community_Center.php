@@ -12,6 +12,8 @@ class Community_Center extends Model implements Searchable
     use HasFactory;
     use SoftDeletes;
     protected $fillable = [
+        'user_id',
+        'post_type',
         'community_name',
         'address',
         'floor_level',
@@ -40,4 +42,9 @@ class Community_Center extends Model implements Searchable
                 $url
             );
         }
+
+        function Community_Center_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

@@ -12,11 +12,29 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/wanted', [App\Http\Controllers\UserWantedController::class, 'wanted_form'])->name('wanted_form');
+//user post
 Route::get('/post/bilboard', [App\Http\Controllers\UserWantedController::class, 'post_bilboard'])->name('post_bilboard');
+Route::get('/post/room', [App\Http\Controllers\UserWantedController::class, 'post_room'])->name('post_room');
+Route::get('/post/hotel', [App\Http\Controllers\UserWantedController::class, 'post_hotel'])->name('post_hotel');
+Route::get('/post/hostel', [App\Http\Controllers\UserWantedController::class, 'post_hostel'])->name('post_hostel');
+Route::get('/post/flat', [App\Http\Controllers\UserWantedController::class, 'post_flat'])->name('post_flat');
+Route::get('/post/office', [App\Http\Controllers\UserWantedController::class, 'post_office'])->name('post_office');
+Route::get('/post/resort', [App\Http\Controllers\UserWantedController::class, 'post_resort'])->name('post_resort');
+Route::get('/post/shop', [App\Http\Controllers\UserWantedController::class, 'post_shop'])->name('post_shop');
+Route::get('/post/community', [App\Http\Controllers\UserWantedController::class, 'post_community'])->name('post_community');
+Route::get('/post/parking', [App\Http\Controllers\UserWantedController::class, 'post_parking_spot'])->name('post_parking_spot');
+Route::get('/post/shop', [App\Http\Controllers\UserWantedController::class, 'post_shop'])->name('post_shop');
+Route::get('/post/factory', [App\Http\Controllers\UserWantedController::class, 'post_factory'])->name('post_factory');
+Route::get('/post/warehouse', [App\Http\Controllers\UserWantedController::class, 'post_warehouse'])->name('post_warehouse');
+Route::get('/post/land', [App\Http\Controllers\UserWantedController::class, 'post_land'])->name('post_land');
+Route::get('/post/pond', [App\Http\Controllers\UserWantedController::class, 'post_pond'])->name('post_pond');
+Route::get('/post/swimmingpool', [App\Http\Controllers\UserWantedController::class, 'post_swimmingpool'])->name('post_swimmingpool');
+Route::get('/post/playground', [App\Http\Controllers\UserWantedController::class, 'post_playground'])->name('post_playground');
+Route::get('/post/shooting', [App\Http\Controllers\UserWantedController::class, 'post_shooting'])->name('post_shooting');
+Route::get('/post/exhibution', [App\Http\Controllers\UserWantedController::class, 'post_exhibution'])->name('post_exhibution');
+Route::get('/post/rooftop', [App\Http\Controllers\UserWantedController::class, 'post_rooftop'])->name('post_rooftop');
 
-
+//end user post
 Route::get('/firebase', [App\Http\Controllers\TestController::class, 'index1']);
 
 //begin All Search

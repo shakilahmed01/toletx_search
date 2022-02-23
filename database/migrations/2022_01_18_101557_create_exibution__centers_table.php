@@ -15,6 +15,8 @@ class CreateExibutionCentersTable extends Migration
     {
         Schema::create('exibution__centers', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('post_type');
             $table->string('exibution_center_name');
             $table->string('address');
             $table->string('room_size');

@@ -15,6 +15,8 @@ class CreateHostelsTable extends Migration
     {
         Schema::create('hostels', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id');
+            $table->string('post_type');
             $table->string('hostel_name');
             $table->string('address');
             $table->string('room_size');

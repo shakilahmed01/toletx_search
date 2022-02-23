@@ -13,6 +13,8 @@ class Swimming_Pool extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'type',
+        'user_id',
+        'post_type',
         'address',
         'size',
         'toilet',
@@ -35,4 +37,9 @@ class Swimming_Pool extends Model implements Searchable
                 $url
             );
         }
+
+        function Swimming_Pool_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

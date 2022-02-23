@@ -13,6 +13,8 @@ class Factory extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'factory_name',
+        'user_id',
+        'post_type',
         'address',
         'floor_level',
         'floor_size',
@@ -38,4 +40,9 @@ class Factory extends Model implements Searchable
                 $url
             );
         }
+
+        function Factory_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

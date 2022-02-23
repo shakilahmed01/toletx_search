@@ -70,6 +70,16 @@
                 @enderror
             </div>
             <div class="form-group row">
+              <label class="col-sm-12 col-md-2 col-form-label">Post Type</label>
+              <div class="col-sm-12 col-md-10">
+                <select class="custom-select col-12" name="post_type">
+                  <option selected="">Choose...</option>
+                  <option value="Wanted">Wanted</option>
+                  <option value="Rented">Rented</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
  							<label class="col-sm-12 col-md-2 col-form-label">Address</label>
  							<div class="col-sm-12 col-md-10">
  								<input class="form-control" name="address" placeholder="Location" type="text">

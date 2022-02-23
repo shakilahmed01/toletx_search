@@ -16,6 +16,7 @@ class CreateBilboardsTable extends Migration
         Schema::create('bilboards', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
+            $table->string('post_type');
             $table->string('address');
             $table->string('type');
             $table->string('size');

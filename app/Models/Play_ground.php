@@ -13,6 +13,8 @@ class Play_ground extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'address',
+        'user_id',
+        'post_type',
         'type',
         'utilities',
         'attached_toilet',
@@ -41,4 +43,9 @@ class Play_ground extends Model implements Searchable
                 $url
             );
         }
+
+        function Play_ground_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

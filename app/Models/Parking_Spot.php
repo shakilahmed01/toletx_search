@@ -13,6 +13,8 @@ class Parking_Spot extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'address',
+        'user_id',
+        'post_type',
         'price',
         'floor_level',
         'floor_height',
@@ -31,4 +33,9 @@ class Parking_Spot extends Model implements Searchable
                 $url
             );
         }
+
+        function Parking_Spot_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }

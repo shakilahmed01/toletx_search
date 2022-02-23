@@ -13,6 +13,8 @@ class Pond extends Model implements Searchable
     use SoftDeletes;
     protected $fillable = [
         'address',
+        'user_id',
+        'post_type',
         'purpose',
         'water_level',
         'pond_area',
@@ -33,4 +35,9 @@ class Pond extends Model implements Searchable
                 $url
             );
         }
+
+        function Pond_relationBetweenUser()
+              {
+              return $this->hasOne('App\Models\User','id','user_id');
+              }
 }
