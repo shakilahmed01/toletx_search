@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 //user post
 Route::get('/post/bilboard', [App\Http\Controllers\UserWantedController::class, 'post_bilboard'])->name('post_bilboard');
+Route::get('/wanted/list/billboard', [App\Http\Controllers\UserWantedController::class, 'list_billboard'])->name('wanted_list_billboard');
 Route::get('/post/room', [App\Http\Controllers\UserWantedController::class, 'post_room'])->name('post_room');
+Route::get('/wanted/list/room', [App\Http\Controllers\UserWantedController::class, 'list_room'])->name('wanted_list_room');
 Route::get('/post/hotel', [App\Http\Controllers\UserWantedController::class, 'post_hotel'])->name('post_hotel');
 Route::get('/post/hostel', [App\Http\Controllers\UserWantedController::class, 'post_hostel'])->name('post_hostel');
 Route::get('/post/flat', [App\Http\Controllers\UserWantedController::class, 'post_flat'])->name('post_flat');

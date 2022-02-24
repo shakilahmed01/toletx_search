@@ -40,13 +40,14 @@
                         </p>
                     </div>
                 </div>
-                <form action="#" class="signin-form">
+                <form action="{{ route('newlogin') }}" method="POST" class="signin-form">
+                  @csrf
                     <div class="form-group mt-3">
-                        <input type="text" class="form-control" required />
-                        <label class="form-control-placeholder" for="username">Username</label>
+                        <input type="numeric" name="phone" class="form-control" required />
+                        <label class="form-control-placeholder" for="username">Mobile number</label>
                     </div>
                     <div class="form-group">
-                        <input id="password-field" type="password" class="form-control" required />
+                        <input id="password-field" type="password" name="password" class="form-control" required />
                         <label class="form-control-placeholder" for="password">Password</label>
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                     </div>
@@ -66,14 +67,14 @@
                             <a href="#">Forgot Password</a>
                         </div>
                     </div>
-                </form> 
+                </form>
                 <p class="text-center">
                     Not a member? <a  id="signUp" href="{{route('registration')}}">Sign Up</a>
                 </p>
             </div>
         </div>
     <!-- </div> -->
- 
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -84,7 +85,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
-    
+
     <script>
     (function($) {
         "use strict";

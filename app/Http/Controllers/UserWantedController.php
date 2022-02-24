@@ -3,15 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Spatie\QueryBuilder\QueryBuilder;
+use Auth;
+use App\Models\Bilboard;
+use App\Models\Room;
+use App\Models\User;
 class UserWantedController extends Controller
 {
     //
     function post_bilboard(){
       return view('wanted.post_bilboard');
     }
+    function list_billboard(){
+      $paginate=Bilboard::latest()->simplePaginate(15);
+      $lists=Bilboard::where('user_id', auth()->id())->get();
+      return view('wanted.list_billboard',compact('lists','paginate'));
+    }
     function post_room(){
       return view('wanted.post_room');
+    }
+    function list_room(){
+      $paginate=Room::latest()->simplePaginate(15);
+      $lists=Room::where('user_id', auth()->id())->get();
+      return view('wanted.list_room',compact('lists','paginate'));
     }
     function post_hostel(){
       return view('wanted.post_hostel');
