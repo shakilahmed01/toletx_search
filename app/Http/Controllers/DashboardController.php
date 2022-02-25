@@ -52,7 +52,7 @@ class DashboardController extends Controller
     }
 
     function admin_index(){
-      $user=User::all();
+      $user=User::all()->count();
       return view('Dashboard.admin_index',compact('user'));
     }
 

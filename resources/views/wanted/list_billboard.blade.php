@@ -12,7 +12,7 @@
 @include('frontend.header')
 	<div class="mobile-menu-overlay"></div>
 
-	<div class="main-container">
+	<div class="container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
 				<div class="page-header">
@@ -59,6 +59,7 @@
 					<table id="tblStocks" class="table">
 						<thead>
 							<tr>
+								<th scope="col">N0.</th>
                 <th scope="col">User Name</th>
                 <th scope="col">Post Type</th>
                 <th scope="col">Address</th>
@@ -72,6 +73,7 @@
 						<tbody>
               @foreach($lists as $list)
               <tr>
+								<th scope="row">{{$list->id}}</th>
                 <th scope="row">{{$list->Bilboard_relationBetweenUser->name}}</th>
                 <td>{{$list->post_type}}</td>
                 <td>{{$list->address}}</td>

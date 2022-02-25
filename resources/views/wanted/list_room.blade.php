@@ -12,7 +12,7 @@
 @include('frontend.header')
 	<div class="mobile-menu-overlay"></div>
 
-	<div class="main-container">
+	<div class="container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
 				<div class="page-header">
@@ -58,7 +58,8 @@
 					<table id="tblStocks" class="table">
 						<thead>
 							<tr>
-								<th scope="col">Id</th>
+								<th scope="col">NO.</th>
+								<th scope="col">User Name</th>
                 <th scope="col">Post Type</th>
                 <th scope="col">Hotel Name</th>
                 <th scope="col">Address</th>
@@ -80,7 +81,8 @@
 						<tbody>
               @foreach($lists as $list)
               <tr>
-                <th scope="row">{{$list->Room_relationBetweenUser->name}}</th>
+								<th scope="row">{{$list->id}}</th>
+                <td>{{$list->Room_relationBetweenUser->name}}</td>
 								<td>{{$list->post_type}}</td>
 								<td>{{$list->hotel_name}}</td>
                 <td>{{$list->address}}</td>
@@ -111,18 +113,6 @@
 				<!-- basic table  End -->
 
 
-
-					<div class="collapse collapse-box" id="contextual-table">
-						<div class="code-box">
-							<div class="clearfix">
-								<a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left"  data-clipboard-target="#contextual-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
-								<a href="#contextual-table" class="btn btn-primary btn-sm pull-right" rel="content-y"  data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>
-							</div>
-							<pre><code class="xml copy-pre" id="contextual-table-code">
-
-							</code></pre>
-						</div>
-					</div>
 				</div>
 				<!-- Contextual classes End -->
 			</div>
@@ -130,7 +120,6 @@
 				toletx By <a href="https://github.com/dropways" target="_blank">codetree</a>
 			</div>
 		</div>
-	</div>
 	<!-- js -->
 @include('Dashboard.js.js')
 </body>

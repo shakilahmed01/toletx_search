@@ -40,8 +40,8 @@
 								<div id="chart"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">2020</div>
-								<div class="weight-600 font-14">Contact</div>
+								<div class="h4 mb-0">{{$user}}</div>
+								<div class="weight-600 font-14">Customar</div>
 							</div>
 						</div>
 					</div>
