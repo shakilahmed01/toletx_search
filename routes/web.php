@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserinformationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,28 +13,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //user post
+Route::get('/verify/otp', [UserinformationController::class, 'verifyOtp'])->name('verify.otp');
 Route::get('/post/bilboard', [App\Http\Controllers\UserWantedController::class, 'post_bilboard'])->name('post_bilboard');
 Route::get('/wanted/list/billboard', [App\Http\Controllers\UserWantedController::class, 'list_billboard'])->name('wanted_list_billboard');
 Route::get('/post/room', [App\Http\Controllers\UserWantedController::class, 'post_room'])->name('post_room');
 Route::get('/wanted/list/room', [App\Http\Controllers\UserWantedController::class, 'list_room'])->name('wanted_list_room');
 Route::get('/post/hotel', [App\Http\Controllers\UserWantedController::class, 'post_hotel'])->name('post_hotel');
+Route::get('/wanted/list/hotel', [App\Http\Controllers\UserWantedController::class, 'list_hotel'])->name('wanted_list_hotel');
 Route::get('/post/hostel', [App\Http\Controllers\UserWantedController::class, 'post_hostel'])->name('post_hostel');
+Route::get('/wanted/list/hostel', [App\Http\Controllers\UserWantedController::class, 'list_hostel'])->name('wanted_list_hostel');
 Route::get('/post/flat', [App\Http\Controllers\UserWantedController::class, 'post_flat'])->name('post_flat');
+Route::get('/wanted/list/flat', [App\Http\Controllers\UserWantedController::class, 'list_flat'])->name('wanted_list_flat');
 Route::get('/post/office', [App\Http\Controllers\UserWantedController::class, 'post_office'])->name('post_office');
+Route::get('/wanted/list/office', [App\Http\Controllers\UserWantedController::class, 'list_office'])->name('wanted_list_office');
 Route::get('/post/resort', [App\Http\Controllers\UserWantedController::class, 'post_resort'])->name('post_resort');
+Route::get('/wanted/list/resort', [App\Http\Controllers\UserWantedController::class, 'list_resort'])->name('wanted_list_resort');
 Route::get('/post/shop', [App\Http\Controllers\UserWantedController::class, 'post_shop'])->name('post_shop');
+Route::get('/wanted/list/shop', [App\Http\Controllers\UserWantedController::class, 'list_shop'])->name('wanted_list_shop');
 Route::get('/post/community', [App\Http\Controllers\UserWantedController::class, 'post_community'])->name('post_community');
+Route::get('/wanted/list/community', [App\Http\Controllers\UserWantedController::class, 'list_community'])->name('wanted_list_community');
 Route::get('/post/parking', [App\Http\Controllers\UserWantedController::class, 'post_parking_spot'])->name('post_parking_spot');
+Route::get('/wanted/list/parking', [App\Http\Controllers\UserWantedController::class, 'list_parking_spot'])->name('wanted_list_parking_spot');
 Route::get('/post/shop', [App\Http\Controllers\UserWantedController::class, 'post_shop'])->name('post_shop');
+Route::get('/wanted/list/shop', [App\Http\Controllers\UserWantedController::class, 'list_shop'])->name('wanted_list_shop');
 Route::get('/post/factory', [App\Http\Controllers\UserWantedController::class, 'post_factory'])->name('post_factory');
+Route::get('/wanted/list/factory', [App\Http\Controllers\UserWantedController::class, 'list_factory'])->name('wanted_list_factory');
 Route::get('/post/warehouse', [App\Http\Controllers\UserWantedController::class, 'post_warehouse'])->name('post_warehouse');
+Route::get('/wanted/list/warehouse', [App\Http\Controllers\UserWantedController::class, 'list_warehouse'])->name('wanted_list_warehouse');
 Route::get('/post/land', [App\Http\Controllers\UserWantedController::class, 'post_land'])->name('post_land');
+Route::get('/wanted/list/land', [App\Http\Controllers\UserWantedController::class, 'list_land'])->name('wanted_list_land');
 Route::get('/post/pond', [App\Http\Controllers\UserWantedController::class, 'post_pond'])->name('post_pond');
+Route::get('/wanted/list/pond', [App\Http\Controllers\UserWantedController::class, 'list_pond'])->name('wanted_list_pond');
 Route::get('/post/swimmingpool', [App\Http\Controllers\UserWantedController::class, 'post_swimmingpool'])->name('post_swimmingpool');
+Route::get('/wanted/list/swimmingpool', [App\Http\Controllers\UserWantedController::class, 'list_swimmingpool'])->name('wanted_list_swimmingpool');
 Route::get('/post/playground', [App\Http\Controllers\UserWantedController::class, 'post_playground'])->name('post_playground');
+Route::get('/wanted/list/playground', [App\Http\Controllers\UserWantedController::class, 'list_playground'])->name('wanted_list_playground');
 Route::get('/post/shooting', [App\Http\Controllers\UserWantedController::class, 'post_shooting'])->name('post_shooting');
+Route::get('/wanted/list/shooting', [App\Http\Controllers\UserWantedController::class, 'list_shooting'])->name('wanted_list_shooting');
 Route::get('/post/exhibution', [App\Http\Controllers\UserWantedController::class, 'post_exhibution'])->name('post_exhibution');
+Route::get('/wanted/list/exhibution', [App\Http\Controllers\UserWantedController::class, 'list_exhibution'])->name('wanted_list_exhibution');
 Route::get('/post/rooftop', [App\Http\Controllers\UserWantedController::class, 'post_rooftop'])->name('post_rooftop');
+Route::get('/wanted/list/rooftop', [App\Http\Controllers\UserWantedController::class, 'list_rooftop'])->name('wanted_list_rooftop');
 
 //end user post
 Route::get('/firebase', [App\Http\Controllers\TestController::class, 'index1']);
@@ -182,7 +201,7 @@ Route::post('loginWithOtp', [App\http\controllers\UserinformationController::cla
 Route::get('loginWithOtp', [App\http\controllers\UserinformationController::class,'indexotp'])->name('loginotp');
 
 
-Route::post('sendOtp', [App\http\controllers\UserinformationController::class, 'sendOtp']);
+Route::post('sendOtp', [App\http\controllers\UserinformationController::class, 'sendOtp'])->name('send.otp');
 Route::post('newregister', [App\http\controllers\UserinformationController::class, 'register'])->name('newregister');
 //end otp login
 

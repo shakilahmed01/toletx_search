@@ -67,11 +67,13 @@
                  <h2><strong>Sign Up Your User Account</strong></h2>
                  <p>Fill all form field to go to next step</p>
                  <div class="row">
-                   @include('firebase')
+
                    <div class="col-md-12 mx-0">
                      <form method="POST" action="{{ route('newregister') }}" id="msform" enctype="multipart/form-data">
                        @csrf
                        <!-- progressbar -->
+
+
                        <ul class=" " id="progressbar">
                          <li class="active" id="account">
                            <strong>Account</strong>
@@ -88,7 +90,7 @@
                            </div>
                            <div class="col-md-12">
                              <label for="phone" class="form-label">Phone No.</label>
-                             <input type="tel" name="phone" class="form-control msform" id="phone">
+                             <input type="tel" name="phone" value="{{request('phone')}}" class="form-control msform" id="phone" readonly>
                            </div>
                            <div class="col-md-12">
                              <label for="email" class="form-label">Email</label>

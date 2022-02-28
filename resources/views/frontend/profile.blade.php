@@ -234,7 +234,7 @@
                                                            <br>
                                                        <span class="service_item_name"> Room</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_flat')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_flat')}}'">
                                                        <span class="icon-flat service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Flat</span>
@@ -244,66 +244,66 @@
                                                            <br>
                                                        <span class="service_item_name"> Building</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_parking_spot')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_parking_spot')}}'">
                                                        <span class="icon-parking service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Parking Spot</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_hotel')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_hotel')}}'">
                                                        <span class="icon-hotel service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Hotel</span>
                                                </div>
                                            </div>
                                            <div class="row mt-2 service-group-row">
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_hostel')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_hostel')}}'">
                                                        <span class="icon-hostel service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Hostel</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_resort')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_resort')}}'">
                                                        <span class="icon-resort service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Resort</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_office')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_office')}}'">
                                                        <span class="icon-office service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Office</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_shop')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_shop')}}'">
                                                        <span class="icon-shop service_item"></span>
                                                            <br>
                                                        <span class="service_item_name"> Shop</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_community')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_community')}}'">
                                                        <span class="icon-community_hall service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Community  Hall</span>
                                                </div>
                                            </div>
                                            <div class="row mt-2 service-group-row">
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_factory')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_factory')}}'">
                                                        <span class="icon-factory service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Factory</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_warehouse')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_warehouse')}}'">
                                                        <span class="icon-warehouse service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Warehouse</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_land')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_land')}}'">
                                                        <span class="icon-land service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Land</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_pond')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_pond')}}'">
                                                        <span class="icon-pond service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Pond</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_swimmingpool')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_swimmingpool')}}'">
                                                        <span class="icon-swimming_pool service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">   Swimming Pool</span>
@@ -311,22 +311,22 @@
                                            </div>
 
                                            <div class="row mt-2 service-group-row">
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_playground')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_playground')}}'">
                                                        <span class="icon-playground service_item" ></span>
                                                            <br>
                                                        <span class="service_item_name"> Play Ground</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('post_shooting')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('wanted_list_shooting')}}'">
                                                        <span class="icon-shooting_spot service_item" ></span>
                                                            <br>
                                                        <span class="service_item_name"> Shooting Spot</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('post_exhibution')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center"  onclick="location.href='{{route('wanted_list_exhibution')}}'">
                                                        <span class="icon-exhibition_center service_item"></span>
                                                             <br>
                                                        <span class="service_item_name">  Exhibition Center</span>
                                                </div>
-                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('post_rooftop')}}'">
+                                               <div class="col-md-2 col-small mx-2 pb-3 pt-3 main-service text-center" onclick="location.href='{{route('wanted_list_rooftop')}}'">
                                                        <span class="icon-rooftop service_item"></span>
                                                            <br>
                                                        <span class="service_item_name">  Rooftop</span>

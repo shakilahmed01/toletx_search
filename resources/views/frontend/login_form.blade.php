@@ -69,7 +69,7 @@
                     </div>
                 </form>
                 <p class="text-center">
-                    Not a member? <a  id="signUp" href="{{route('registration')}}">Sign Up</a>
+                    Not a member? <a  id="signUp" href="{{route('loginWithOtp')}}">Sign Up</a>
                 </p>
             </div>
         </div>

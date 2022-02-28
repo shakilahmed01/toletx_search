@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use App\Models\UserInformation;
 use App\Models\User;
+use App\Models\Phoneotp;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
@@ -52,15 +53,25 @@ class UserinformationController extends Controller
 
   public function loginWithOtp(Request $request){
       Log::info($request);
-      $user  = User::where([['phone','=',request('phone')],['otp','=',request('otp')]])->first();
-      if( $user){
-          Auth::login($user, true);
-          User::where('phone','=',$request->phone)->update(['otp' => null]);
-          return Redirect::HOME();
+      $phoneInfo = Phoneotp::where('phone_number', $request->phone)->first();
+      if ($phoneInfo && $phoneInfo->otp == $request->otp) {
+        $phoneInfo->update([
+          'otp' => '',
+          'isverified' => 1
+        ]);
+        return redirect()->route('registration', ['phone' => $request->phone]);
       }
-      else{
-          return Redirect::back ();
-      }
+      return redirect()->back();
+      // $user  = User::where([['phone','=',request('phone')],['otp','=',request('otp')]])->first();
+      // if( $user){
+      //     Auth::login($user, true);
+      //     User::where('phone','=',$request->phone)->update(['otp' => null]);
+      //     return Redirect::HOME();
+      // }
+      // else{
+      //     return Redirect::back ();
+      // }
+
   }
 
 
@@ -77,6 +88,11 @@ class UserinformationController extends Controller
       ]);
       if ($validator->fails()) {
           return response()->json(['error'=>$validator->errors()], 401);
+      }
+      $phone = Phoneotp::where(['phone_number' => $request->phone, 'isverified' => 1 ])->exists();
+      if (!$phone) {
+        return redirect()->back()->withErrors(['msg' => 'Phone is not verified']);
+        //error message
       }
 
       $auth_image=User::insertGetId([
@@ -115,22 +131,29 @@ class UserinformationController extends Controller
                   }
 
 
-      return redirect('loginWithOtp');
+      return view('frontend.login_form');
   }
 
   public function sendOtp(Request $request){
 
       $otp = rand(1000,9999);
       Log::info("otp = ".$otp);
-      $user = User::where('phone','=',$request->phone)->update(['otp' => $otp]);
+      $user = Phoneotp::create([
+        'phone_number'=>$request->phone,
+        'otp' => $otp
+      ]);
       // send otp to mobile no using sms api
+      return redirect()->route('verify.otp', ['phone' => $request->phone]);
       return response()->json([$user],200);
   }
 
   function indexotp(){
     return view('auth.OtpLogin');
   }
-
+  public function verifyOtp()
+  {
+    return view('auth.verify-otp');
+  }
 
 
 
