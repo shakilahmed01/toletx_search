@@ -53,9 +53,14 @@ class UserinformationController extends Controller
 
   public function loginWithOtp(Request $request){
       Log::info($request);
-      $phoneInfo = Phoneotp::where('phone_number', $request->phone)->first();
-      if ($phoneInfo && $phoneInfo->otp == $request->otp) {
-        $phoneInfo->update([
+
+      $phoneinfo = Phoneotp::where('phone_number', $request->phone)->first();
+      $time=Carbon::now()->diffInSeconds($phoneinfo->updated_at);
+      if($time >120){
+        return redirect()->route('loginotp')->withErrors(['msg'=>'errors']);
+      }
+      if ($phoneinfo && $phoneinfo->otp == $request->otp) {
+        $phoneinfo->update([
           'otp' => '',
           'isverified' => 1
         ]);
@@ -138,10 +143,20 @@ class UserinformationController extends Controller
 
       $otp = rand(1000,9999);
       Log::info("otp = ".$otp);
-      $user = Phoneotp::create([
-        'phone_number'=>$request->phone,
-        'otp' => $otp
-      ]);
+        $phone = Phoneotp::where(['phone_number' => $request->phone])->first();
+        if (!empty($phone)) {
+          $phone->update([
+            'isverified' => 0,
+                'otp' => $otp
+          ]);
+        }
+          else{
+            $user = Phoneotp::create([
+              'phone_number'=>$request->phone,
+              'otp' => $otp
+              ]);
+          }
+
       // send otp to mobile no using sms api
       return redirect()->route('verify.otp', ['phone' => $request->phone]);
       return response()->json([$user],200);

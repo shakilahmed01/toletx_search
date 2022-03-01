@@ -31,6 +31,27 @@
                                 </div>
                             </div>
                         </form>
+                            <hr>
+                            @include('auth.time_counter')
+                            <hr>
+
+                          <div class="card-header">Didn't get otp ?? click here</div>
+                            <form method="POST" action="{{ route('send.otp') }}">
+                                @csrf
+                                <div class="form-group row">
+                                    <label for="phone" class="d-none">{{ __('Mobile No') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="phone" type="number" class="d-none" value="{{request('phone')}}" name="phone" required autofocus>
+                                    </div>
+                                </div>
+                                <div class="form-group row send-otp">
+                                    <div class="col-md-8 offset-md-4">
+                                        <button class="btn btn-success"  type="submit">Resend Otp</button>
+                                    </div>
+                                </div>
+                            </form>
+
                     </div>
                 </div>
             </div>
