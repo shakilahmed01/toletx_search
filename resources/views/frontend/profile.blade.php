@@ -79,6 +79,7 @@
                                              <h4 class="text-right">Profile Information</h4>
                                          </div>
                                          <div class="row mt-2">
+                                           <butto class="btn btn-primary" onclick="location.href='{{route('list_user')}}'">List your Information</button>
                                              <div class="col-md-12">
                                                  <label class="labels">
                                                      <i class="icofont-hotel-boy"></i>

@@ -40,6 +40,10 @@ class UserinformationController extends Controller
 
   public $successStatus = 200;
 
+public function check(){
+  return view('check');
+}
+
   public function login_new(Request $request){
       Log::info($request);
       if(Auth::attempt(['phone' => request('phone'), 'password' => request('password')])){
@@ -55,9 +59,10 @@ class UserinformationController extends Controller
       Log::info($request);
 
       $phoneinfo = Phoneotp::where('phone_number', $request->phone)->first();
+
       $time=Carbon::now()->diffInSeconds($phoneinfo->updated_at);
-      if($time >120){
-        return redirect()->route('loginotp')->withErrors(['msg'=>'errors']);
+      if($time >60){
+        return redirect()->route('loginotp')->with('Failed','your time is up!! Enter your mobile number again');
       }
       if ($phoneinfo && $phoneinfo->otp == $request->otp) {
         $phoneinfo->update([
@@ -86,8 +91,6 @@ class UserinformationController extends Controller
       $validator = Validator::make($request->all(), [
           'name' => 'required',
           'phone' => 'required',
-          'photo' => 'required',
-          'email' => 'required',
           'password' => 'required',
           'password_confirmation' => 'required|same:password',
       ]);
@@ -142,7 +145,7 @@ class UserinformationController extends Controller
   public function sendOtp(Request $request){
 
       $otp = rand(1000,9999);
-      Log::info("otp = ".$otp);
+      // Log::info("otp = ".$otp);
         $phone = Phoneotp::where(['phone_number' => $request->phone])->first();
         if (!empty($phone)) {
           $phone->update([
@@ -156,6 +159,11 @@ class UserinformationController extends Controller
               'otp' => $otp
               ]);
           }
+
+          // $same=Carbon::now()->diffInSeconds($phone->created_at);
+          // if($same >10 && $same->phone_number == $request->phone_number){
+          //   return redirect()->route('loginotp')->with('Failed','you have already limitation');
+          // }
 
       // send otp to mobile no using sms api
       return redirect()->route('verify.otp', ['phone' => $request->phone]);
@@ -196,4 +204,6 @@ class UserinformationController extends Controller
       //       }
       return back()->with('success','User have successfully registered.');
     }
+
+
 }

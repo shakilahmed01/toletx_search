@@ -46,7 +46,53 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+     public function list_user(){
 
+         $users=User::where('id', auth()->id())->get();
+       return view('user.user_list',compact('users'));
+     }
+
+     function user_edit($id){
+       $list=User::findOrFail($id);
+       return view('user.single_user_list',compact('list'));
+     }
+
+     function user_update(Request $request){
+
+           $hotel= Hotel::findOrFail($request->id)->update([
+             'user_id'=>$request->user_id,
+             'post_type'=>$request->post_type,
+             'hotel_name'=>$request->hotel_name,
+             'location'=>$request->location,
+             'wifi'=>$request->wifi,
+             'bathroom'=>$request->bathroom,
+             'cctv'=>$request->cctv,
+             'lift'=>$request->lift,
+             'furnished'=>$request->furnished,
+             'security'=>$request->security,
+             'parking'=>$request->parking,
+             'price'=>$request->price,
+             'guest_count'=>$request->guest_count,
+
+           ]);
+
+
+           if ($request->hasFile('photo')) {
+
+               $photo_upload     =  $request ->photo;
+               $photo_extension  =  $photo_upload -> getClientOriginalExtension();
+               $photo_name       =  "toletx_hotel_image_". $hotel . "." . $photo_extension;
+               Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hotels/'.$photo_name),100);
+               Hotel::find($hotel)->update([
+               'photo'          => $photo_name,
+                   ]);
+
+
+                 }
+           return back()->with('success','Hotel information have been successfully Updated.');
+     }
+
+     //user end
     function index(){
       return view('index');
     }

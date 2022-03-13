@@ -11,7 +11,7 @@ p {
 </style>
 </head>
 <body>
-<h1>Please verify your Otp within 2 minuets</h1>
+<h1>Please verify your Otp within 1 minuets</h1>
 <p id="demo"></p>
 
 <script>

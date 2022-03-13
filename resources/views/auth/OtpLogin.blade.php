@@ -1,11 +1,17 @@
-@include('frontend.header')
-
+@extends('layouts.master')
+@section('content')
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
+                    @if ($message = Session::get('Failed'))
+          												<div class="alert alert-success alert-block">
+          														<button type="button" class="close" data-dismiss="alert">×</button>
+          																<strong>{{ $message }}</strong>
+          												</div>
+          												@endif
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('send.otp') }}">
@@ -65,4 +71,4 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-@include('frontend.footer')
+@endsection

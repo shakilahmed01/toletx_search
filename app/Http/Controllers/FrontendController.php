@@ -104,7 +104,7 @@ class FrontendController extends Controller
         return view('frontend.bilboard');
     }
     function login_form(){
-        return view('login_form');
+        return view('frontend.login_form');
     }
     function single_pg(){
         return view('frontend.single_pg');

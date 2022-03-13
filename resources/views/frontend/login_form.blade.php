@@ -30,10 +30,10 @@
                     </div>
                     <div class="w-100">
                         <p class="social-media d-flex justify-content-end">
-                            <a href="#" class="social-icon d-flex align-items-center justify-content-center">
+                            <a href="{{route('loginfb')}}" class="social-icon d-flex align-items-center justify-content-center">
                                 <span class="fab fa-facebook-f"></span>
                             </a>
-                            <a href="#" class="social-icon d-flex align-items-center justify-content-center">
+                            <a href="{{route('login.google')}}" class="social-icon d-flex align-items-center justify-content-center">
                                 <span class="fab fa-google"></span>
                                 <!-- <i class="fab fa-google"></i> -->
                             </a>

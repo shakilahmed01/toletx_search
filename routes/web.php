@@ -12,6 +12,8 @@ use App\Http\Controllers\UserinformationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/check', [UserinformationController::class, 'check'])->name('check');
+
 //user post
 Route::get('/verify/otp', [UserinformationController::class, 'verifyOtp'])->name('verify.otp');
 Route::get('/post/bilboard', [App\Http\Controllers\UserWantedController::class, 'post_bilboard'])->name('post_bilboard');
@@ -191,26 +193,25 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'after_login_ho
 Route::get('/index', [App\Http\Controllers\DashboardController::class, 'index'])->name('index');
 
 //begin userInformation
-Route::post('post/user/information',[App\http\controllers\UserinformationController::class, 'post_user_information'])->name('post_user_information');
+Route::post('post/user/information',[App\Http\Controllers\UserinformationController::class, 'post_user_information'])->name('post_user_information');
 //end userInformation
 
 //otp login
-Route::post('login_new',  [App\http\controllers\UserinformationController::class,'login_new'])->name('newlogin');
+Route::post('login_new',  [App\Http\Controllers\UserinformationController::class,'login_new'])->name('newlogin');
 
-Route::post('loginWithOtp', [App\http\controllers\UserinformationController::class,'loginWithOtp'])->name('loginWithOtp');
-Route::get('loginWithOtp', [App\http\controllers\UserinformationController::class,'indexotp'])->name('loginotp');
+Route::post('loginWithOtp', [App\Http\Controllers\UserinformationController::class,'loginWithOtp'])->name('loginWithOtp');
+Route::get('loginWithOtp', [App\Http\Controllers\UserinformationController::class,'indexotp'])->name('loginotp');
 
 
-Route::post('sendOtp', [App\http\controllers\UserinformationController::class, 'sendOtp'])->name('send.otp');
-Route::post('newregister', [App\http\controllers\UserinformationController::class, 'register'])->name('newregister');
+Route::post('sendOtp', [App\Http\Controllers\UserinformationController::class, 'sendOtp'])->name('send.otp');
+Route::post('newregister', [App\Http\Controllers\UserinformationController::class, 'register'])->name('newregister');
 //end otp login
 
 
-//Facebook Login URL
-Route::prefix('facebook')->name('facebook.')->group( function(){
-    Route::get('auth', [App\Http\Controllers\FaceBookController::class, 'loginUsingFacebook'])->name('fb_login');
-    Route::get('callback', [App\Http\Controllers\FaceBookController::class, 'callbackFromFacebook'])->name('callback');
-});
+// Facebook Login URL
+
+Route::get('auth', [App\Http\Controllers\FaceBookController::class, 'loginUsingFacebook'])->name('loginfb');
+Route::get('callback', [App\Http\Controllers\FaceBookController::class, 'callbackFromFacebook'])->name('callback');
 
 //end facebook login
 
@@ -228,6 +229,13 @@ Route::get('login/facebook/callback', [App\Http\Controllers\Auth\LoginController
 Route::get('/admin/index', [App\Http\Controllers\DashboardController::class, 'admin_index'])->middleware('CheckROle','password.confirm')->name('admin_index');
 Route::get('/custom/login', [App\Http\Controllers\DashboardController::class, 'custom_login'])->name('custom_login');
 Route::get('/custom/register', [App\Http\Controllers\DashboardController::class, 'custom_register'])->name('custom_register');
+
+//user profile update
+Route::get('/list/user', [App\Http\Controllers\DashboardController::class, 'list_user'])->name('list_user');
+Route::get('/user/edit/{id}',[App\Http\Controllers\DashboardController::class, 'user_edit'])->name('user_edit');
+Route::post('/user/update',[App\Http\Controllers\DashboardController::class, 'user_update'])->name('hotel_update');
+
+//end
 //begin hotel
 Route::get('/add/hotel', [App\Http\Controllers\DashboardController::class, 'add_hotel'])->name('add_hotel');
 Route::post('/post/hotel', [App\Http\Controllers\DashboardController::class, 'post_hotel_information'])->name('post_hotel_information');
@@ -441,45 +449,45 @@ Route::get('/', function () {
 });
 
 Route::get('/index',[App\Http\Controllers\FrontendController::class, 'index'])->name('index');
-Route::get('/registration',[App\Http\Controllers\frontendController::class, 'registration'])->name('registration');
+Route::get('/registration',[App\Http\Controllers\FrontendController::class, 'registration'])->name('registration');
 
-Route::get('/single_header_added',[App\Http\Controllers\frontendController::class, 'single_header_added'])->name('single_header_added');
-Route::get('/header',[App\Http\Controllers\frontendController::class, 'header'])->name('header');
-Route::get('/footer',[App\Http\Controllers\frontendController::class, 'footer'])->name('footer');
-Route::get('/faq',[App\Http\Controllers\frontendController::class, 'faq'])->name('faq');
-Route::get('/report_contact_us',[App\Http\Controllers\frontendController::class, 'report_contact_us'])->name('report_contact_us');
-Route::get('/advertise',[App\Http\Controllers\frontendController::class, 'advertise'])->name('advertise');
-Route::get('/after_login_home',[App\Http\Controllers\frontendController::class, 'after_login_home'])->name('after_login_home');
-Route::get('/single_pg',[App\Http\Controllers\frontendController::class, 'single_pg'])->Middleware('auth')->name('single_pg');
+Route::get('/single_header_added',[App\Http\Controllers\FrontendController::class, 'single_header_added'])->name('single_header_added');
+Route::get('/header',[App\Http\Controllers\FrontendController::class, 'header'])->name('header');
+Route::get('/footer',[App\Http\Controllers\FrontendController::class, 'footer'])->name('footer');
+Route::get('/faq',[App\Http\Controllers\FrontendController::class, 'faq'])->name('faq');
+Route::get('/report_contact_us',[App\Http\Controllers\FrontendController::class, 'report_contact_us'])->name('report_contact_us');
+Route::get('/advertise',[App\Http\Controllers\FrontendController::class, 'advertise'])->name('advertise');
+Route::get('/after_login_home',[App\Http\Controllers\FrontendController::class, 'after_login_home'])->name('after_login_home');
+Route::get('/single_pg',[App\Http\Controllers\FrontendController::class, 'single_pg'])->Middleware('auth')->name('single_pg');
 
-Route::get('/profile',[App\Http\Controllers\frontendController::class, 'profile'])->name('profile');
-Route::get('/profile_info',[App\Http\Controllers\frontendController::class, 'profile_info'])->name('profile_info');
-Route::get('/room',[App\Http\Controllers\frontendController::class, 'room'])->name('room');
-Route::get('/flat',[App\Http\Controllers\frontendController::class, 'flat'])->name('flat');
-Route::get('/building',[App\Http\Controllers\frontendController::class, 'building'])->name('building');
-Route::get('/parking',[App\Http\Controllers\frontendController::class, 'parking'])->name('parking');
-Route::get('/hotel',[App\Http\Controllers\frontendController::class, 'hotel'])->name('hotel');
-Route::get('/hostel',[App\Http\Controllers\frontendController::class, 'hostel'])->name('hostel');
-Route::get('/resort',[App\Http\Controllers\frontendController::class, 'resort'])->name('resort');
-Route::get('/office',[App\Http\Controllers\frontendController::class, 'office'])->name('office');
-Route::get('/shop',[App\Http\Controllers\frontendController::class, 'shop'])->name('shop');
-Route::get('/community_hall',[App\Http\Controllers\frontendController::class, 'community_hall'])->name('community_hall');
-Route::get('/factory',[App\Http\Controllers\frontendController::class, 'factory'])->name('factory');
-Route::get('/warehouse',[App\Http\Controllers\frontendController::class, 'warehouse'])->name('warehouse');
-Route::get('/land',[App\Http\Controllers\frontendController::class, 'land'])->name('land');
-Route::get('/pond',[App\Http\Controllers\frontendController::class, 'pond'])->name('pond');
-Route::get('/swimming_pool',[App\Http\Controllers\frontendController::class, 'swimming_pool'])->name('swimming_pool');
-Route::get('/playground',[App\Http\Controllers\frontendController::class, 'playground'])->name('playground');
-Route::get('/shooting_spot',[App\Http\Controllers\frontendController::class, 'shooting_spot'])->name('shooting_spot');
-Route::get('/exhibition_center',[App\Http\Controllers\frontendController::class, 'exhibition_center'])->name('exhibition_center');
-Route::get('/rooftop',[App\Http\Controllers\frontendController::class, 'rooftop'])->name('rooftop');
-Route::get('/bilboard',[App\Http\Controllers\frontendController::class, 'bilboard'])->name('bilboard');
-Route::get('/login_form',[App\Http\Controllers\frontendController::class, 'login_form'])->name('login_form');
-Route::get('/slider_section',[App\Http\Controllers\frontendController::class, 'slider_section'])->name('slider_section');
-Route::get('/service_item',[App\Http\Controllers\frontendController::class, 'service_item'])->name('service_item');
-Route::get('/icon',[App\Http\Controllers\frontendController::class, 'icon'])->name('icon');
+Route::get('/profile',[App\Http\Controllers\FrontendController::class, 'profile'])->name('profile');
+Route::get('/profile_info',[App\Http\Controllers\FrontendController::class, 'profile_info'])->name('profile_info');
+Route::get('/room',[App\Http\Controllers\FrontendController::class, 'room'])->name('room');
+Route::get('/flat',[App\Http\Controllers\FrontendController::class, 'flat'])->name('flat');
+Route::get('/building',[App\Http\Controllers\FrontendController::class, 'building'])->name('building');
+Route::get('/parking',[App\Http\Controllers\FrontendController::class, 'parking'])->name('parking');
+Route::get('/hotel',[App\Http\Controllers\FrontendController::class, 'hotel'])->name('hotel');
+Route::get('/hostel',[App\Http\Controllers\FrontendController::class, 'hostel'])->name('hostel');
+Route::get('/resort',[App\Http\Controllers\FrontendController::class, 'resort'])->name('resort');
+Route::get('/office',[App\Http\Controllers\FrontendController::class, 'office'])->name('office');
+Route::get('/shop',[App\Http\Controllers\FrontendController::class, 'shop'])->name('shop');
+Route::get('/community_hall',[App\Http\Controllers\FrontendController::class, 'community_hall'])->name('community_hall');
+Route::get('/factory',[App\Http\Controllers\FrontendController::class, 'factory'])->name('factory');
+Route::get('/warehouse',[App\Http\Controllers\FrontendController::class, 'warehouse'])->name('warehouse');
+Route::get('/land',[App\Http\Controllers\FrontendController::class, 'land'])->name('land');
+Route::get('/pond',[App\Http\Controllers\FrontendController::class, 'pond'])->name('pond');
+Route::get('/swimming_pool',[App\Http\Controllers\FrontendController::class, 'swimming_pool'])->name('swimming_pool');
+Route::get('/playground',[App\Http\Controllers\FrontendController::class, 'playground'])->name('playground');
+Route::get('/shooting_spot',[App\Http\Controllers\FrontendController::class, 'shooting_spot'])->name('shooting_spot');
+Route::get('/exhibition_center',[App\Http\Controllers\FrontendController::class, 'exhibition_center'])->name('exhibition_center');
+Route::get('/rooftop',[App\Http\Controllers\FrontendController::class, 'rooftop'])->name('rooftop');
+Route::get('/bilboard',[App\Http\Controllers\FrontendController::class, 'bilboard'])->name('bilboard');
+Route::get('/login_form',[App\Http\Controllers\FrontendController::class, 'login_form'])->name('login_form');
+Route::get('/slider_section',[App\Http\Controllers\FrontendController::class, 'slider_section'])->name('slider_section');
+Route::get('/service_item',[App\Http\Controllers\FrontendController::class, 'service_item'])->name('service_item');
+Route::get('/icon',[App\Http\Controllers\FrontendController::class, 'icon'])->name('icon');
 
 
-Route::get('/slider_section_slick',[App\Http\Controllers\frontendController::class, 'slider_section_slick'])->name('slider_section_slick');
+Route::get('/slider_section_slick',[App\Http\Controllers\FrontendController::class, 'slider_section_slick'])->name('slider_section_slick');
 //end Frontend
 //end Admin

@@ -7,6 +7,7 @@
                             <div class="text-center"  >
                             <img  src="{{asset('Frontend/assets/img/profile/person2.png')}}" class="rounded-circle mx-auto img-img"  alt="" srcset="">
                             <i class="fas fa-edit edit edit-img-icon"></i>
+                        
                             </div>
 
 

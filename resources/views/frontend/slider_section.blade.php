@@ -1,5 +1,5 @@
- 
- 
+
+
     <link rel="stylesheet" href="{{asset('Frontend/assets/css/slick-slider.css')}}">
 
 <!--Slick CSS-->
@@ -17,7 +17,7 @@
 
 <body class="snippet-body">
 <div class="items">
- 
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
         src="{{asset('Frontend/assets/img/1.The_Pinnacle_(Guangzhou,_China)_indexxrus.jfif')}}"
@@ -39,14 +39,14 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-   
-   
+
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/2.Gevora_Hotel.jpg')}}" 
+        src=" {{asset('Frontend/assets/img/2.Gevora_Hotel.jpg')}}"
         class="card-img-top"
         alt="..."
       />
@@ -65,14 +65,14 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-   
-   
+
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/3.HK_Bank_of_China_Tower_View.jpg')}}"  
+        src=" {{asset('Frontend/assets/img/3.HK_Bank_of_China_Tower_View.jpg')}}"
         class="card-img-top"
         alt="..."
       />
@@ -91,13 +91,13 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-   
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/4.Central-plaza2.jpg')}}"   
+        src=" {{asset('Frontend/assets/img/4.Central-plaza2.jpg')}}"
         class="card-img-top"
         alt="..."
       />
@@ -116,13 +116,13 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-   
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/5.Dalian_International_Trade_Center,_Aug2018_(cropped).jpg')}}"   
+        src=" {{asset('Frontend/assets/img/5.Dalian_International_Trade_Center,_Aug2018_(cropped).jpg')}}"
         class="card-img-top"
         alt="..."
       />
@@ -141,13 +141,13 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-  
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/6.Empire_State_Building_from_the_Top_of_the_Rock.jpg')}}"   
+        src=" {{asset('Frontend/assets/img/6.Empire_State_Building_from_the_Top_of_the_Rock.jpg')}}"
         class="card-img-top"
         alt="..."
       />
@@ -166,13 +166,13 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-   
+
     <div class="card ml-3 mr-4 slick-slider-card" style=   "width: 12rem">
       <img
-        src=" {{asset('Frontend/assets/img/7.Diwang_Dasha_25.JPG')}}"  
+        src=" {{asset('Frontend/assets/img/7.Diwang_Dasha_25.JPG')}}"
         class="card-img-top"
         alt="..."
       />
@@ -191,15 +191,15 @@
         <button type="button" class="btn btn-custom-color2 check-detail mt-2">
           <a href="{{route('single_pg')}}"class="btn  ">Check Details</a>
         </button>
-         
+
       </div>
     </div>
-  </div> 
+  </div>
 
 <script type="text/javascript" src=""></script>
 <script type="text/javascript" src=""></script>
 <script type="text/Javascript">
-  $(document).ready(function(){ 
+  $(document).ready(function(){
 
   $('.items').slick({
       infinite: true,
