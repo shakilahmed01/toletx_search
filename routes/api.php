@@ -19,10 +19,14 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 Route::post('sendotp', [RegisterController::class, 'sendOtp']);
 Route::post('loginWithOtp', [RegisterController::class, 'loginWithOtp']);
-
 //end login_register api
 
-Route::middleware('auth:api')->group( function () {
+//service post api
+
+
+//end service post api
+
+Route::middleware('auth:sanctum')->group( function () {
     Route::resource('products', ProductController::class);
 });
 
@@ -30,25 +34,30 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request){
     return $request->user();
 });
 //post api route
-Route::middleware('auth:sanctum')->post('room/post',[App\http\controllers\Api\ApiController::class, 'api_post_room'])->name('api_post_room');
-Route::middleware('auth:sanctum')->post('land/post',[App\http\controllers\Api\ApiController::class, 'api_post_land'])->name('api_post_land');
-Route::middleware('auth:sanctum')->post('community/post',[App\http\controllers\Api\ApiController::class, 'api_post_community'])->name('api_post_community');
-Route::middleware('auth:sanctum')->post('shooting/post',[App\http\controllers\Api\ApiController::class, 'api_post_shooting'])->name('api_post_shooting');
-Route::middleware('auth:sanctum')->post('shop/post',[App\http\controllers\Api\ApiController::class, 'api_post_shop'])->name('api_post_shop');
-Route::middleware('auth:sanctum')->post('factory/post',[App\http\controllers\Api\ApiController::class, 'api_post_factory'])->name('api_post_factory');
-Route::middleware('auth:sanctum')->post('warehouse/post',[App\http\controllers\Api\ApiController::class, 'api_post_warehouse'])->name('api_post_warehouse');
-Route::middleware('auth:sanctum')->post('pond/post',[App\http\controllers\Api\ApiController::class, 'api_post_pond'])->name('api_post_pond');
-Route::middleware('auth:sanctum')->post('swimmingpool/post',[App\http\controllers\Api\ApiController::class, 'api_post_swimmingpool'])->name('api_post_swimmingpool');
-Route::middleware('auth:sanctum')->post('bilboard/post',[App\http\controllers\Api\ApiController::class, 'api_post_bilboard'])->name('api_post_bilboard');
-Route::middleware('auth:sanctum')->post('rooftop/post',[App\http\controllers\Api\ApiController::class, 'api_post_rooftop'])->name('api_post_rooftop');
-Route::middleware('auth:sanctum')->post('resort/post',[App\http\controllers\Api\ApiController::class, 'api_post_resort'])->name('api_post_resort');
-Route::middleware('auth:sanctum')->post('exibution/post',[App\http\controllers\Api\ApiController::class, 'api_post_exibution'])->name('api_post_exibution');
-Route::middleware('auth:sanctum')->post('playground/post',[App\http\controllers\Api\ApiController::class, 'api_post_playground'])->name('api_post_playground');
-Route::middleware('auth:sanctum')->post('hotel/post',[App\http\controllers\Api\ApiController::class, 'api_post_hotel'])->name('api_post_hotel');
-Route::middleware('auth:sanctum')->post('flat/post',[App\http\controllers\Api\ApiController::class, 'api_post_flat'])->name('api_post_flat');
-Route::middleware('auth:sanctum')->post('parking/post',[App\http\controllers\Api\ApiController::class, 'api_post_parking'])->name('api_post_parking');
-Route::middleware('auth:sanctum')->post('hostel/post',[App\http\controllers\Api\ApiController::class, 'api_post_hostel'])->name('api_post_hostel');
-Route::middleware('auth:sanctum')->post('office/post',[App\http\controllers\Api\ApiController::class, 'api_post_office'])->name('api_post_office');
+Route::post('room/post',[App\http\controllers\Api\ApiController::class, 'api_post_room'])->name('api_post_room');
+Route::post('land/post',[App\http\controllers\Api\ApiController::class, 'api_post_land'])->name('api_post_land');
+Route::post('community/post',[App\http\controllers\Api\ApiController::class, 'api_post_community'])->name('api_post_community');
+Route::post('shooting/post',[App\http\controllers\Api\ApiController::class, 'api_post_shooting'])->name('api_post_shooting');
+Route::post('shop/post',[App\http\controllers\Api\ApiController::class, 'api_post_shop'])->name('api_post_shop');
+Route::post('factory/post',[App\http\controllers\Api\ApiController::class, 'api_post_factory'])->name('api_post_factory');
+Route::post('warehouse/post',[App\http\controllers\Api\ApiController::class, 'api_post_warehouse'])->name('api_post_warehouse');
+Route::post('pond/post',[App\http\controllers\Api\ApiController::class, 'api_post_pond'])->name('api_post_pond');
+Route::post('swimmingpool/post',[App\http\controllers\Api\ApiController::class, 'api_post_swimmingpool'])->name('api_post_swimmingpool');
+Route::post('bilboard/post',[App\http\controllers\Api\ApiController::class, 'api_post_bilboard'])->name('api_post_bilboard');
+Route::post('rooftop/post',[App\http\controllers\Api\ApiController::class, 'api_post_rooftop'])->name('api_post_rooftop');
+Route::post('resort/post',[App\http\controllers\Api\ApiController::class, 'api_post_resort'])->name('api_post_resort');
+Route::post('exibution/post',[App\http\controllers\Api\ApiController::class, 'api_post_exibution'])->name('api_post_exibution');
+Route::post('playground/post',[App\http\controllers\Api\ApiController::class, 'api_post_playground'])->name('api_post_playground');
+Route::post('hotel/post',[App\http\controllers\Api\ApiController::class, 'api_post_hotel'])->name('api_post_hotel');
+Route::post('flat/post',[App\http\controllers\Api\ApiController::class, 'api_post_flat'])->name('api_post_flat');
+Route::post('parking/post',[App\http\controllers\Api\ApiController::class, 'api_post_parking'])->name('api_post_parking');
+//hostel
+Route::post('hostel/post',[App\http\controllers\Api\ApiController::class, 'api_post_hostel'])->name('api_post_hostel');
+Route::get('/hostel/edit/{id}',[App\Http\Controllers\Api\ApiController::class, 'api_hostel_edit'])->name('hostel_edit');
+Route::PATCH('/hostel/update',[App\Http\Controllers\Api\ApiController::class, 'hostel_update'])->name('hostel_update');
+Route::DELETE('/hostel/delete/{id}',[App\Http\Controllers\Api\ApiController::class, 'hostel_delete'])->name('hostel_delete');
+//end hostel
+Route::post('office/post',[App\http\controllers\Api\ApiController::class, 'api_post_office'])->name('api_post_office');
 
 //get api route
 Route::get('/user',[App\http\controllers\Api\ApiController::class, 'createapi_user_registration'])->name('createapi_user_registration');

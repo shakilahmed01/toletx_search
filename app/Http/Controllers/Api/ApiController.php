@@ -24,6 +24,7 @@ use App\Models\Play_ground;
 use App\Models\Swimming_Pool;
 use App\Models\Restaurant;
 use App\Models\Shop;
+use App\Models\Land;
 use Carbon\Carbon;
 use Image;
 class ApiController extends Controller
@@ -126,7 +127,7 @@ class ApiController extends Controller
 
 
 //post function start
-    
+
 
     public function api_post_room(Request $request)
 
@@ -191,7 +192,10 @@ class ApiController extends Controller
                  ]);
                }
 
-               return response()->json($land);
+               $success['token'] =  $land->createToken('MyApp')->accessToken;
+               $success['post_type'] =  $land->post_type;
+
+               return $this->sendResponse($success, 'land post successfully.');
    }
 
 //end land
@@ -229,7 +233,10 @@ class ApiController extends Controller
               ]);
             }
 
-       return response()->json($community);
+            $success['token'] =  $community->createToken('MyApp')->accessToken;
+            $success['post_type'] =  $community->post_type;
+
+            return $this->sendResponse($success, 'community post successfully.');
    }
 //end community
         function api_post_shooting(Request $request){
@@ -266,7 +273,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($shooting);
+                $success['token'] =  $shooting->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $shooting->post_type;
+
+                return $this->sendResponse($success, 'shooting post successfully.');
         }
 //end shooting
 
@@ -299,7 +309,10 @@ class ApiController extends Controller
                 ]);
               }
 
-          return response()->json($shop);
+              $success['token'] =  $shop->createToken('MyApp')->accessToken;
+              $success['post_type'] =  $shop->post_type;
+
+              return $this->sendResponse($success, 'shop post successfully.');
       }
 //end shop
 
@@ -334,7 +347,10 @@ class ApiController extends Controller
                 ]);
               }
 
-        return response()->json($factory);
+              $success['token'] =  $factory->createToken('MyApp')->accessToken;
+              $success['post_type'] =  $factory->post_type;
+
+              return $this->sendResponse($success, 'factory post successfully.');
       }
 //end factory
 
@@ -369,7 +385,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-            return response()->json($warehouse);
+                $success['token'] =  $warehouse->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $warehouse->post_type;
+
+                return $this->sendResponse($success, 'warehouse post successfully.');
         }
 
 //end warehouse
@@ -399,7 +418,10 @@ class ApiController extends Controller
                 ]);
               }
 
-        return response()->json($pond);
+              $success['token'] =  $pond->createToken('MyApp')->accessToken;
+              $success['post_type'] =  $pond->post_type;
+
+              return $this->sendResponse($success, 'pond post successfully.');
       }
 //end pond
 
@@ -431,7 +453,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-            return response()->json($swimmingpool);
+                $success['token'] =  $swimmingpool->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $swimmingpool->post_type;
+
+                return $this->sendResponse($success, 'swimmingpool post successfully.');
         }
 //end swimmingpool
 
@@ -459,7 +484,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($bilboard);
+                $success['token'] =  $bilboard->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $bilboard->post_type;
+
+                return $this->sendResponse($success, 'bilboard post successfully.');
         }
 //end bilboard
 
@@ -490,7 +518,10 @@ class ApiController extends Controller
                     ]);
                   }
 
-              return response()->json($rooftop);
+                  $success['token'] =  $rooftop->createToken('MyApp')->accessToken;
+                  $success['post_type'] =  $rooftop->post_type;
+
+                  return $this->sendResponse($success, 'rooftop post successfully.');
           }
 //end rooftop
 
@@ -533,7 +564,10 @@ class ApiController extends Controller
                     ]);
                   }
 
-            return response()->json($restaurant);
+                  $success['token'] =  $restaurant->createToken('MyApp')->accessToken;
+                  $success['post_type'] =  $restaurant->post_type;
+
+                  return $this->sendResponse($success, 'restaurant post successfully.');
           }
 //end restaurant
 
@@ -576,7 +610,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($exibution_center);
+                $success['token'] =  $exibution_center->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $exibution_center->post_type;
+
+                return $this->sendResponse($success, 'exibution_center post successfully.');
         }
 //end exhibution
 
@@ -614,7 +651,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-            return response()->json($playground);
+                $success['token'] =  $playground->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $playground->post_type;
+
+                return $this->sendResponse($success, 'playground post successfully.');
         }
 //end playground
 
@@ -646,7 +686,10 @@ class ApiController extends Controller
               'photo'          => $photo_name,
                   ]);
                 }
-          return response()->json($hotel);
+                $success['token'] =  $hotel->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $hotel->post_type;
+
+                return $this->sendResponse($success, 'hotel post successfully.');
         }
 //end hotel
 
@@ -683,7 +726,10 @@ class ApiController extends Controller
                     ]);
                   }
 
-            return response()->json($flat);
+                  $success['token'] =  $flat->createToken('MyApp')->accessToken;
+                  $success['post_type'] =  $flat->post_type;
+
+                  return $this->sendResponse($success, 'flat post successfully.');
           }
 //end flat
 
@@ -711,7 +757,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($parking);
+                $success['token'] =  $parking->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $parking->post_type;
+
+                return $this->sendResponse($success, 'parking post successfully.');
         }
 //end parking
 
@@ -749,8 +798,62 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($hostel);
+                $success['token'] =  $hostel->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $hostel->post_type;
+
+                return $this->sendResponse($success, 'hostel post successfully.');
         }
+
+        function api_hostel_edit($id){
+          $list=Hostel::findOrFail($id);
+          return $list;
+        }
+
+        function hostel_delete($id){
+            $list=Hostel::findOrFail($id)->delete();
+            return back();
+          }
+
+        function hostel_update(Request $request){
+
+                $hostel=Hostel::findOrFail($request->id)->update([
+                  'user_id'=>$request->user_id,
+                  'post_type'=>$request->post_type,
+                  'hostel_name'=>$request->hostel_name,
+                  'address'=>$request->address,
+                  'room_size'=>$request->room_size,
+                  'room_type'=>$request->room_type,
+                  'attached_toilet'=>$request->attached_toilet,
+                  'utilities'=>$request->utilities,
+                  'attached_varanda'=>$request->attached_varanda,
+                  'hot_water'=>$request->hot_water,
+                  'laundry'=>$request->laundry,
+                  'ac'=>$request->ac,
+                  'cable_tv'=>$request->cable_tv,
+                  'wifi'=>$request->wifi,
+                  'lift'=>$request->lift,
+                  'furnished'=>$request->furnished,
+                  'parking'=>$request->parking,
+                  'price'=>$request->price,
+
+                ]);
+
+
+                if ($request->hasFile('photo')) {
+
+                    $photo_upload     =  $request ->photo;
+                    $photo_extension  =  $photo_upload -> getClientOriginalExtension();
+                    $photo_name       =  "toletx_hostel_image_". $hostel . "." . $photo_extension;
+                    Image::make($photo_upload)->resize(452,510)->save(base_path('public/uploads/hostels/'.$photo_name),100);
+                    Hostel::find($hostel)->update([
+                    'photo'          => $photo_name,
+                        ]);
+
+
+                      }
+
+                    return $hostel;
+          }
 //end hostel
 
         function api_post_office(Request $request){
@@ -782,7 +885,10 @@ class ApiController extends Controller
                   ]);
                 }
 
-          return response()->json($office);
+                $success['token'] =  $office->createToken('MyApp')->accessToken;
+                $success['post_type'] =  $office->post_type;
+
+                return $this->sendResponse($success, 'office post successfully.');
         }
 //end office
 
